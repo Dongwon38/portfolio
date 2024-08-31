@@ -1,0 +1,196 @@
+@use "vars" as *;
+@use "mixins" as *;
+body {
+  font-family: $font-primary;
+  background-color: $color-bg-primary;
+  color: $color-font-primary;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background-color: $color-bg-secondary;
+  border-bottom: 2px solid $color-border;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: $color-font-primary;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  position: relative;
+}
+
+.nav-item::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: $color-theme-primary;
+  transition: width 0.3s ease;
+}
+
+.nav-item:hover::after {
+  width: 100%;
+}
+
+.nav-item:focus {
+  color: $color-theme-primary;
+  outline: none;
+}
+
+.nav-item:active {
+  color: $color-theme-secondary;
+}
+
+.hero {
+  text-align: center;
+  padding: 80px 16px;
+  background-color: $color-bg-secondary;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: $color-theme-primary;
+}
+
+.hero-description {
+  font-size: 1.25rem;
+  margin: 16px 0;
+  color: $color-font-secondary;
+}
+
+.hero-button {
+  padding: 15px 45px;
+  font-size: 1.125rem;
+  color: #ffffff;
+  background: $color-btn;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.5s, transform 0.2s ease;
+  background-size: 200% auto;
+  box-shadow: 0 0 20px $color-btn-shadow;
+}
+
+.hero-button:hover {
+  background-position: right center;
+  color: #ffffff;
+  text-decoration: none;
+  transform: translateY(-3px);
+  box-shadow: 0 0 25px $color-btn-shadow;
+}
+
+.hero-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px $color-btn-shadow;
+}
+
+.hero-button:active {
+  transform: translateY(-1px);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.typography-section {
+  padding: 80px 16px;
+  background-color: $color-bg-primary;
+  text-align: center;
+}
+
+.typography-section h2 {
+  font-size: 2rem;
+  margin-bottom: 32px;
+  color: $color-theme-primary;
+}
+
+.heading-primary {
+  font-family: $font-primary;
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.heading-secondary {
+  font-family: $font-secondary;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.body-text {
+  font-family: $font-primary;
+  font-size: 1rem;
+  font-weight: 400;
+  color: $color-font-primary;
+}
+
+.footer {
+  text-align: center;
+  padding: 16px;
+  background-color: $color-bg-secondary;
+  border-top: 2px solid $color-border;
+  color: $color-font-secondary;
+}
+
+a {
+  color: $color-a;
+  text-decoration: none;
+  border-bottom: 1px solid $color-a-border;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+a:hover {
+  color: $color-theme-secondary;
+  border-color: $color-theme-secondary;
+}
+
+a:focus {
+  outline: none;
+  color: $color-a-focus;
+  border-color: $color-a-focus;
+}
+
+a:active {
+  color: $color-a-active;
+  border-color: $color-a-active;
+}
+
+// Media queries for responsiveness
+@media (max-width: $breakpoint-sm) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+}

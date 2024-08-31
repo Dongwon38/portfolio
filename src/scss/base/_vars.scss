@@ -1,0 +1,31 @@
+// Color variables
+$color-bg-primary: #ffffff; // base background
+$color-font-primary: #333333; // base font color
+
+$color-bg-secondary: #f0f0f0; // hero background
+$color-font-secondary: #666666; // hero font color
+$color-border: #e0e0e0; // border color
+
+$color-theme-primary: #da22ff; // primary theme color (purple)
+$color-theme-secondary: #9733ee; // secondary theme color (violet)
+
+// Button colors
+$color-btn: linear-gradient(to right, #da22ff 0%, #9733ee 51%, #da22ff 100%);
+// $color-btn-hover: background-position: right center;
+$color-btn-shadow: rgba(154, 33, 240, 0.3); // button shadow color
+
+// Anchor colors
+$color-a: #da22ff; // anchor text color
+$color-a-border: rgba(154, 33, 240, 0.5); // anchor border color
+$color-a-focus: #9733ee; // focus color
+$color-a-active: #da22ff; // active color
+
+// Font variables
+$font-primary: "Roboto", "Apple SD Gothic Neo", sans-serif;
+$font-secondary: "Noto Sans", sans-serif;
+
+// Breakpoints
+$breakpoint-xs: 480px;
+$breakpoint-sm: 768px;
+$breakpoint-md: 1024px;
+$breakpoint-lg: 1200px;
