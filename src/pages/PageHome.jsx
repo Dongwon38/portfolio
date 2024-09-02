@@ -2,52 +2,36 @@ import React from "react";
 
 function PageHome() {
   return (
-    <main>
-      <nav class="navbar">
-        <div class="logo">Logo</div>
-        <ul class="nav-list">
-          <li>
-            <a href="#" class="nav-item">
-              Home
-            </a>
-          </li>
-          <li>
-            <a href="#" class="nav-item">
-              About
-            </a>
-          </li>
-          <li>
-            <a href="#" class="nav-item">
-              Projects
-            </a>
-          </li>
-          <li>
-            <a href="#" class="nav-item">
-              Contact
-            </a>
-          </li>
-        </ul>
-      </nav>
+    <div>
+      <header class="header">
+        <div class="logo">MySiteLogo</div>
+      </header>
 
-      <section class="hero">
-        <h1 class="hero-title">Welcome to My Portfolio</h1>
-        <p class="hero-description">Showcasing my best work and skills.</p>
-        <button class="hero-button">See My Work</button>
-      </section>
-
-      <section class="typography-section">
-        <h2>Typography Section</h2>
-        <p class="heading-primary">This is a primary heading</p>
-        <p class="heading-secondary">This is a secondary heading</p>
-        <p class="body-text">
-          This is some body text that shows the standard font styling.
-        </p>
-      </section>
+      <main class="main-content">
+        <section class="profile">
+          <h1>My Profile</h1>
+          <p>Welcome to my portfolio. Here is some information about me.</p>
+        </section>
+        <section class="works">
+          <h2>My Works</h2>
+          <ul class="work-list">
+            <li class="work-item">Project 1</li>
+            <li class="work-item">Project 2</li>
+            <li class="work-item">Project 3</li>
+          </ul>
+        </section>
+      </main>
 
       <footer class="footer">
-        <p>&copy; 2024 My Portfolio</p>
+        <p>© 2024 My Portfolio</p>
       </footer>
-    </main>
+
+      <div class="mobile-nav">
+        <button class="nav-btn">Home</button>
+        <button class="nav-btn">About</button>
+        <button class="nav-btn">Contact</button>
+      </div>
+    </div>
   );
 }
 

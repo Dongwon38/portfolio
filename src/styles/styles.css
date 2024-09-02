@@ -437,7 +437,7 @@ body {
   left: 0;
   width: 0;
   height: 2px;
-  background-color: #da22ff;
+  background-color: #ff7e00;
   transition: width 0.3s ease;
 }
 
@@ -446,12 +446,12 @@ body {
 }
 
 .nav-item:focus {
-  color: #da22ff;
+  color: #ff7e00;
   outline: none;
 }
 
 .nav-item:active {
-  color: #9733ee;
+  color: #ff3d00;
 }
 
 .hero {
@@ -463,7 +463,7 @@ body {
 .hero-title {
   font-size: 2.5rem;
   font-weight: bold;
-  color: #da22ff;
+  color: #ff7e00;
 }
 
 .hero-description {
@@ -476,13 +476,13 @@ body {
   padding: 15px 45px;
   font-size: 1.125rem;
   color: #ffffff;
-  background: linear-gradient(to right, #da22ff 0%, #9733ee 51%, #da22ff 100%);
+  background: linear-gradient(to right, #ff7e00 0%, #ff3d00 51%, #ff7e00 100%);
   border: none;
   border-radius: 10px;
   cursor: pointer;
   transition: background 0.5s, transform 0.2s ease;
   background-size: 200% auto;
-  box-shadow: 0 0 20px rgba(154, 33, 240, 0.3);
+  box-shadow: 0 0 20px rgba(255, 125, 0, 0.3);
 }
 
 .hero-button:hover {
@@ -490,12 +490,12 @@ body {
   color: #ffffff;
   text-decoration: none;
   transform: translateY(-3px);
-  box-shadow: 0 0 25px rgba(154, 33, 240, 0.3);
+  box-shadow: 0 0 25px rgba(255, 125, 0, 0.3);
 }
 
 .hero-button:focus {
   outline: none;
-  box-shadow: 0 0 0 4px rgba(154, 33, 240, 0.3);
+  box-shadow: 0 0 0 4px rgba(255, 125, 0, 0.3);
 }
 
 .hero-button:active {
@@ -512,7 +512,7 @@ body {
 .typography-section h2 {
   font-size: 2rem;
   margin-bottom: 32px;
-  color: #da22ff;
+  color: #ff7e00;
 }
 
 .heading-primary {
@@ -545,26 +545,26 @@ body {
 }
 
 a {
-  color: #da22ff;
+  color: #ff7e00;
   text-decoration: none;
-  border-bottom: 1px solid rgba(154, 33, 240, 0.5);
+  border-bottom: 1px solid rgba(255, 125, 0, 0.5);
   transition: color 0.3s ease, border-color 0.3s ease;
 }
 
 a:hover {
-  color: #9733ee;
-  border-color: #9733ee;
+  color: #ff3d00;
+  border-color: #ff3d00;
 }
 
 a:focus {
   outline: none;
-  color: #9733ee;
-  border-color: #9733ee;
+  color: #ff3d00;
+  border-color: #ff3d00;
 }
 
 a:active {
-  color: #da22ff;
-  border-color: #da22ff;
+  color: #ff7e00;
+  border-color: #ff7e00;
 }
 
 @media (max-width: 768px) {
