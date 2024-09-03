@@ -1,6 +1,27 @@
 @use "vars" as *;
 @use "mixins" as *;
 
+// font, text
+body {
+  font-family: "Inter";
+}
+h1 {
+  font-size: 48px;
+  letter-spacing: -0.025em;
+}
+h2 {
+  font-size: 18px;
+  letter-spacing: -0.025em;
+}
+p {
+  font-size: 16px;
+}
+
+.site-wrapper {
+  padding: 3rem 1.5rem;
+}
+
+// button
 .btn-grad {
   background-image: linear-gradient(
     to right,
