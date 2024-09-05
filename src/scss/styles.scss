@@ -4,10 +4,12 @@
 @use "./base/mixins";
 @use "./base/default-setting";
 
-@use "./base/sample";
-
 // pages
-// @use "./pages/home";
+@use "./pages/home";
 
 // components
+@use "./components/header";
+@use "./components/footer";
+@use "./components/nav";
+
 // @use "./components/scroll-progress-bar";

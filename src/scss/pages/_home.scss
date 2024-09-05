@@ -1,7 +1,63 @@
-@use "vars" as *;
-@use "mixins" as *;
+@use "../base/vars" as *;
+@use "../base/mixins" as *;
 
 // ============ Site Layout ============ //
-.site-wrapper {
+body {
+  background-color: $color-bg-primary;
+  color: $color-font-primary;
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: center;
+  max-width: 125rem;
+
+  margin: 0 auto;
+  padding: 0;
+}
+
+.main-home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: 3rem 1.5rem;
+  max-width: 75rem;
+}
+
+.profile,
+.works {
+  width: 100%;
+  margin-bottom: 20px;
+  border: 1px solid black;
+}
+
+@media (min-width: $desktop) {
+  .main-home {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+  }
+}
+
+// ============ Profile ============ //
+
+.profile {
+  background-color: $color-bg-secondary;
+  h2,
+  p {
+    margin-top: 0.5rem;
+  }
+}
+
+// ============ Works ============ //
+.works {
+  background-color: $color-bg-primary;
+}
+
+.work-item {
+  padding: 10px;
+  border-bottom: 1px solid $color-border;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $color-bg-secondary;
+  }
 }

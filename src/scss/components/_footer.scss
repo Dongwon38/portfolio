@@ -1,0 +1,9 @@
+@use "../base/vars" as *;
+@use "../base/mixins" as *;
+
+.footer {
+  background-color: $color-bg-secondary;
+  padding: 16px;
+  text-align: center;
+  border-top: 2px solid $color-border;
+}
