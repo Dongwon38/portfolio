@@ -10,57 +10,59 @@ function PageHome() {
         <p>I build end user-focused web experiences with precision and care.</p>
       </section>
       <section className="works">
-        <h2>Works</h2>
-        <ul className="work-list">
-          <a href="/work/1">
-            <section className="work-item">
-              <img className="thumbnail" src={sample} alt="sample-bg" />
-              <div className="overlay">
-                <h3 className="title">Project 1 Title</h3>
-                <p className="excerpt">
-                  put an one line explanation here within 50 letters
-                </p>
-                <div className="skill-box">
-                  <div className="skill">React</div>
-                  <div className="skill">Sass</div>
-                  <div className="skill">Javascript</div>
+        <div className="works-inner-container">
+          <h2>Works</h2>
+          <ul className="work-list">
+            <a href="/work/1">
+              <section className="work-item">
+                <img className="thumbnail" src={sample} alt="sample-bg" />
+                <div className="overlay">
+                  <h3 className="title">Project 1 Title</h3>
+                  <p className="excerpt">
+                    put an one line explanation here within 50 letters
+                  </p>
+                  <div className="skill-box">
+                    <div className="skill">React</div>
+                    <div className="skill">Sass</div>
+                    <div className="skill">Javascript</div>
+                  </div>
                 </div>
-              </div>
-            </section>
-          </a>
-          <a href="/work/2">
-            <section className="work-item">
-              <img className="thumbnail" src={sample} alt="sample-bg" />
-              <div className="overlay">
-                <h3 className="title">Project 1 Title</h3>
-                <p className="overview">
-                  put an one line explanation here within 50 letters
-                </p>
-                <div className="skill-box">
-                  <div className="skill">React</div>
-                  <div className="skill">Sass</div>
-                  <div className="skill">Javascript</div>
+              </section>
+            </a>
+            <a href="/work/2">
+              <section className="work-item">
+                <img className="thumbnail" src={sample} alt="sample-bg" />
+                <div className="overlay">
+                  <h3 className="title">Project 1 Title</h3>
+                  <p className="overview">
+                    put an one line explanation here within 50 letters
+                  </p>
+                  <div className="skill-box">
+                    <div className="skill">React</div>
+                    <div className="skill">Sass</div>
+                    <div className="skill">Javascript</div>
+                  </div>
                 </div>
-              </div>
-            </section>
-          </a>
-          <a href="/work/3">
-            <section className="work-item">
-              <img className="thumbnail" src={sample} alt="sample-bg" />
-              <div className="overlay">
-                <h3 className="title">Project 1 Title</h3>
-                <p className="overview">
-                  put an one line explanation here within 50 letters
-                </p>
-                <div className="skill-box">
-                  <div className="skill">React</div>
-                  <div className="skill">Sass</div>
-                  <div className="skill">Javascript</div>
+              </section>
+            </a>
+            <a href="/work/3">
+              <section className="work-item">
+                <img className="thumbnail" src={sample} alt="sample-bg" />
+                <div className="overlay">
+                  <h3 className="title">Project 1 Title</h3>
+                  <p className="overview">
+                    put an one line explanation here within 50 letters
+                  </p>
+                  <div className="skill-box">
+                    <div className="skill">React</div>
+                    <div className="skill">Sass</div>
+                    <div className="skill">Javascript</div>
+                  </div>
                 </div>
-              </div>
-            </section>
-          </a>
-        </ul>
+              </section>
+            </a>
+          </ul>
+        </div>
       </section>
     </main>
   );
