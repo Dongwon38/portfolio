@@ -1,4 +1,5 @@
 import React from "react";
+import sample from "../assets/sample.jpg";
 
 function PageHome() {
   return (
@@ -11,9 +12,54 @@ function PageHome() {
       <section className="works">
         <h2>Works</h2>
         <ul className="work-list">
-          <li className="work-item">Project 1</li>
-          <li className="work-item">Project 2</li>
-          <li className="work-item">Project 3</li>
+          <a href="">
+            <section className="work-item">
+              <img className="thumbnail" src={sample} alt="sample-bg" />
+              <div className="overlay">
+                <h3 className="title">Project 1 Title</h3>
+                <p className="overview">
+                  put an one line explanation here within 50 letters
+                </p>
+                <div className="skill-box">
+                  <div className="skill">React</div>
+                  <div className="skill">Sass</div>
+                  <div className="skill">Javascript</div>
+                </div>
+              </div>
+            </section>
+          </a>
+          <a href="">
+            <section className="work-item">
+              <img className="thumbnail" src={sample} alt="sample-bg" />
+              <div className="overlay">
+                <h3 className="title">Project 1 Title</h3>
+                <p className="overview">
+                  put an one line explanation here within 50 letters
+                </p>
+                <div className="skill-box">
+                  <div className="skill">React</div>
+                  <div className="skill">Sass</div>
+                  <div className="skill">Javascript</div>
+                </div>
+              </div>
+            </section>
+          </a>
+          <a href="">
+            <section className="work-item">
+              <img className="thumbnail" src={sample} alt="sample-bg" />
+              <div className="overlay">
+                <h3 className="title">Project 1 Title</h3>
+                <p className="overview">
+                  put an one line explanation here within 50 letters
+                </p>
+                <div className="skill-box">
+                  <div className="skill">React</div>
+                  <div className="skill">Sass</div>
+                  <div className="skill">Javascript</div>
+                </div>
+              </div>
+            </section>
+          </a>
         </ul>
       </section>
     </main>

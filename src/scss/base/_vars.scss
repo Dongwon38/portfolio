@@ -1,9 +1,9 @@
 // Color variables
-$color-bg-primary: #ffffff; // base background
+$color-bg-primary: #f0f0f0; // base background
 $color-font-primary: #333333; // base font color
 
 $color-bg-secondary: #f0f0f0; // hero background
-$color-font-secondary: #666666; // hero font color
+$color-font-secondary: #ffffff; // hero font color
 $color-border: #e0e0e0; // border color
 
 $color-theme-primary: #ff7e00; // primary theme color (orange)
@@ -25,3 +25,7 @@ $mobile-wide: 30em; // 480px
 $tablet: 48em; // 768px
 $desktop: 64em; // 1024px
 $desktop-wide: 75em; // 1200px
+
+// z-index
+$index-overlay: 2;
+$index-nav: 10;

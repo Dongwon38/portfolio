@@ -3,6 +3,7 @@
 
 .mobile-nav {
   display: none; // Initially hidden, will show on mobile view
+  z-index: $index-nav;
 }
 
 @media (max-width: $mobile-wide) {
