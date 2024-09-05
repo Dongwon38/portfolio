@@ -474,7 +474,7 @@ body {
 
 .work-item {
   position: relative;
-  height: 15rem;
+  height: 25rem;
   overflow: hidden;
   margin: 1rem 0;
   transition: background-color 0.3s ease;
