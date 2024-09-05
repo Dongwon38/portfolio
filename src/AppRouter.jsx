@@ -4,6 +4,7 @@ import PageHome from "./pages/PageHome";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Nav from "./components/Nav";
+import PageWork from "./pages/PageWork";
 
 function AppRouter() {
   return (
@@ -12,6 +13,7 @@ function AppRouter() {
       <Nav />
       <Routes>
         <Route path="/" exact element={<PageHome />}></Route>
+        <Route path="/work/:id" exact element={<PageWork />}></Route>
       </Routes>
       <Footer />
     </BrowserRouter>

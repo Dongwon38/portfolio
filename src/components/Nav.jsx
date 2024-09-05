@@ -1,12 +1,19 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Nav() {
   return (
     <div>
       <div className="mobile-nav">
-        <button className="nav-btn">Home</button>
-        <button className="nav-btn">About</button>
-        <button className="nav-btn">Contact</button>
+        <Link to="/" className="nav-btn">
+          Home
+        </Link>
+        <Link to="/" className="nav-btn">
+          About
+        </Link>
+        <Link to="/" className="nav-btn">
+          Contact
+        </Link>
       </div>
     </div>
   );

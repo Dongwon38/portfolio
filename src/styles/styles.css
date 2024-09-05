@@ -503,12 +503,13 @@ body {
   color: #ffffff;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.9) 80%);
 }
-.work-item .overlay .skill-box {
+
+.skill-box {
   display: flex;
   gap: 0.5rem;
   margin-top: 8px;
 }
-.work-item .overlay .skill-box .skill {
+.skill-box .skill {
   padding: 0.2rem 0.5rem;
   background-color: gray;
   border-radius: 5px;

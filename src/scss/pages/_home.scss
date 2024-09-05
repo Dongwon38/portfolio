@@ -90,15 +90,16 @@ body {
       rgba(0, 0, 0, 0) 30%,
       rgba(0, 0, 0, 0.9) 80%
     );
-    .skill-box {
-      display: flex;
-      gap: 0.5rem;
-      margin-top: 8px;
-      .skill {
-        padding: 0.2rem 0.5rem;
-        background-color: gray;
-        border-radius: 5px;
-      }
-    }
+  }
+}
+
+.skill-box {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 8px;
+  .skill {
+    padding: 0.2rem 0.5rem;
+    background-color: gray;
+    border-radius: 5px;
   }
 }
