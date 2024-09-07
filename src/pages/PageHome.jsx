@@ -1,5 +1,8 @@
 import React from "react";
 import sample from "../assets/sample.jpg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedin, faSquareGithub } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 function PageHome() {
   return (
@@ -8,6 +11,23 @@ function PageHome() {
         <h1>Dong-won Kang</h1>
         <h2>Front-end Web Developer</h2>
         <p>I build end user-focused web experiences with precision and care.</p>
+        <div className="skills">
+          <div className="develop">
+            <div className="skill">React</div>
+          </div>
+          <div className="design"></div>
+        </div>
+        <div className="contact-box">
+          <a href="mailto:dongwon.dwk@gmail.com">
+            <FontAwesomeIcon icon={faEnvelope} />
+          </a>
+          <a href="https://github.com/Dongwon38">
+            <FontAwesomeIcon icon={faSquareGithub} />
+          </a>
+          <a href="https://www.linkedin.com/in/dong-won-kang/">
+            <FontAwesomeIcon icon={faLinkedin} />
+          </a>
+        </div>
       </section>
       <section className="works">
         <div className="works-inner-container">

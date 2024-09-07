@@ -456,6 +456,7 @@ body {
     display: grid;
     grid-template-columns: 2.5fr 3.5fr;
     gap: 2rem;
+    padding: 1.5rem;
   }
   .works-inner-container {
     overflow-y: scroll;
@@ -468,6 +469,17 @@ body {
 .profile h2,
 .profile p {
   margin-top: 0.5rem;
+}
+.profile .contact-box {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.profile .contact-box a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
 }
 
 .works {
@@ -521,17 +533,18 @@ body {
 
 .header {
   background-color: #f0f0f0;
-  padding: 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 2px solid #e0e0e0;
 }
 
 .logo {
-  font-size: 1.5rem;
   font-weight: bold;
   color: #ff7e00;
+}
+.logo img {
+  width: 2rem;
+  padding: 4px;
 }
 
 .footer {
