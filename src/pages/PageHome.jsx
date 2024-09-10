@@ -12,10 +12,22 @@ function PageHome() {
         <h2>Front-end Web Developer</h2>
         <p>I build end user-focused web experiences with precision and care.</p>
         <div className="skills">
+          <h2>Skills</h2>
           <div className="develop">
+            <h3>Develop</h3>
+            <div className="skill">HTML</div>
+            <div className="skill">CSS</div>
+            <div className="skill">Sass</div>
+            <div className="skill">Javascript</div>
             <div className="skill">React</div>
+            <div className="skill">Wordpress</div>
           </div>
-          <div className="design"></div>
+          <div className="design">
+            <h3>Design</h3>
+            <div className="skill">Illustrator</div>
+            <div className="skill">Photoshop</div>
+            <div className="skill">XD</div>
+          </div>
         </div>
         <div className="contact-box">
           <a href="mailto:dongwon.dwk@gmail.com">
@@ -84,6 +96,7 @@ function PageHome() {
           </ul>
         </div>
       </section>
+      <button className="btn-live-chat">Chat</button>
     </main>
   );
 }
