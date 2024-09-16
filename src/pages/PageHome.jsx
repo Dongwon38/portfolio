@@ -27,7 +27,7 @@ function PageHome() {
         <div className="works-inner-container">
           <h2>Works</h2>
           <ul className="work-list">
-            <a href="/work/1">
+            <a href="./work/1">
               <section className="work-item">
                 <img className="thumbnail" src={sample} alt="sample-bg" />
                 <div className="overlay">
@@ -43,7 +43,7 @@ function PageHome() {
                 </div>
               </section>
             </a>
-            <a href="/work/2">
+            <a href="./work/2">
               <section className="work-item">
                 <img className="thumbnail" src={sample} alt="sample-bg" />
                 <div className="overlay">
@@ -59,7 +59,7 @@ function PageHome() {
                 </div>
               </section>
             </a>
-            <a href="/work/3">
+            <a href="./work/3">
               <section className="work-item">
                 <img className="thumbnail" src={sample} alt="sample-bg" />
                 <div className="overlay">
@@ -78,7 +78,6 @@ function PageHome() {
           </ul>
         </div>
       </section>
-      <button className="btn-live-chat">Chat</button>
     </main>
   );
 }

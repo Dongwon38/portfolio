@@ -4,12 +4,14 @@ import PageHome from "./pages/PageHome";
 import Header from "./components/Header";
 import Nav from "./components/Nav";
 import PageWork from "./pages/PageWork";
+import ScrollProgressBar from "./components/ScrollProgressbar";
 
 function AppRouter() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={`/portfolio`}>
+      <ScrollProgressBar />
       <Header />
-      {/* <Nav /> */}
+      <Nav />
       <Routes>
         <Route path="/" exact element={<PageHome />}></Route>
         <Route path="/work/:id" exact element={<PageWork />}></Route>

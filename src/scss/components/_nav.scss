@@ -2,30 +2,48 @@
 @use "../base/mixins" as *;
 
 .mobile-nav {
-  display: none; // Initially hidden, will show on mobile view
+  display: flex;
+  justify-content: space-around;
+  background-color: #333;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 58px;
   z-index: $index-nav;
 }
 
-@media (max-width: $mobile-wide) {
+.mobile-nav .nav-btn {
+  @include flex-center-center;
+  flex-direction: column;
+  width: 4rem;
+  text-decoration: none;
+  color: #999;
+  cursor: pointer;
+  &:hover {
+    color: $color-theme-secondary;
+  }
+}
+
+.mobile-nav img {
+  width: 1.5rem;
+  height: 1.5rem;
+  filter: invert(95%) sepia(95%) saturate(20%) hue-rotate(289deg)
+    brightness(104%) contrast(106%);
+}
+
+.active {
+  filter: invert(65%) sepia(3%) saturate(14%) hue-rotate(7deg) brightness(94%)
+    contrast(87%);
+}
+
+.mobile-nav .icon-label {
+  margin-top: 6px;
+  font-size: 12px;
+}
+
+@media (min-width: 37.5em) {
   .mobile-nav {
-    display: flex;
-    justify-content: space-around;
-    background-color: $color-bg-secondary;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-
-    .nav-btn {
-      background: none;
-      border: none;
-      color: $color-theme-primary;
-      font-size: 1rem;
-      cursor: pointer;
-
-      &:hover {
-        color: $color-theme-secondary;
-      }
-    }
+    display: none; // Initially hidden, will show on mobile view
   }
 }

@@ -1,24 +1,24 @@
-// Color variables f5a600
-$color-bg-primary: #333333; // base background
-$color-font-primary: #f0f0f0; // base font color
+$color-bg-primary: #222;
+$color-font-primary: #f0f0f0;
 
-$color-bg-secondary: #333333; // hero background
-$color-font-secondary: #ffffff; // hero font color
-$color-border: #e0e0e0; // border color
+$color-bg-secondary: #333;
+$color-font-secondary: #fff;
+$color-border: #e0e0e0;
 
-$color-theme-primary: #ff7e00; // primary theme color (orange)
-$color-theme-secondary: #ff3d00; // secondary theme color (deep orange)
+$color-theme-primary: #fbbc04;
+$color-theme-secondary: #0056df;
+$color-sample1: #00e99b;
+$color-sample2: #ff0000;
 
 // Button colors
 $color-btn: linear-gradient(to right, #ff7e00 0%, #ff3d00 51%, #ff7e00 100%);
-// $color-btn-hover: background-position: right center;
-$color-btn-shadow: rgba(255, 125, 0, 0.3); // button shadow color
+$color-btn-shadow: rgba(255, 125, 0, 0.3);
 
 // Anchor colors
-$color-a: #ff7e00; // anchor text color
-$color-a-border: rgba(255, 125, 0, 0.5); // anchor border color
-$color-a-focus: #ff3d00; // focus color
-$color-a-active: #ff7e00; // active color
+$color-a: #ff7e00;
+$color-a-border: rgba(255, 125, 0, 0.5);
+$color-a-focus: #ff3d00;
+$color-a-active: #ff7e00;
 
 // Breakpoints
 $mobile-wide: 30em; // 480px
@@ -28,5 +28,7 @@ $desktop-wide: 75em; // 1200px
 
 // z-index
 $index-overlay: 2;
+$index-header: 10;
 $index-nav: 10;
+$index-progressbar: 999;
 $index-btn-live-chat: 999;

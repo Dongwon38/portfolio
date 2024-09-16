@@ -1,21 +1,27 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import iconHome from "../assets/icons/house-solid.svg";
+import iconWork from "../assets/icons/briefcase-solid.svg";
+import iconAbout from "../assets/icons/user-solid.svg";
 
 function Nav() {
   return (
-    <div>
+    <nav>
       <div className="mobile-nav">
         <Link to="/" className="nav-btn">
-          Home
+          <img src={iconHome} alt="home icon" />
+          <p className="icon-label">Home</p>
         </Link>
         <Link to="/" className="nav-btn">
-          About
+          <img src={iconWork} alt="work icon" />
+          <p className="icon-label">Work</p>
         </Link>
         <Link to="/" className="nav-btn">
-          Contact
+          <img src={iconAbout} alt="about icon" />
+          <p className="icon-label">About</p>
         </Link>
       </div>
-    </div>
+    </nav>
   );
 }
 

@@ -1,0 +1,38 @@
+@use "../base/vars" as *;
+@use "../base/mixins" as *;
+
+// scroll progress bar
+.scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background-color: $color-theme-primary;
+  z-index: $index-progressbar;
+  transition: width 0.3s ease;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+// works inner container scrollbar
+.works::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+.works::-webkit-scrollbar-track {
+  background: $color-bg-primary;
+  border-radius: 10px;
+}
+
+.works::-webkit-scrollbar-thumb {
+  background: #9d9d9d;
+  border-radius: 5px;
+  visibility: hidden;
+}
+
+.works::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
