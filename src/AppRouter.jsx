@@ -9,7 +9,7 @@ function AppRouter() {
   return (
     <BrowserRouter>
       <Header />
-      <Nav />
+      {/* <Nav /> */}
       <Routes>
         <Route path="/" exact element={<PageHome />}></Route>
         <Route path="/work/:id" exact element={<PageWork />}></Route>

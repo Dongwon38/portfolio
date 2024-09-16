@@ -428,12 +428,12 @@ li {
 
 a,
 a:visited {
-  color: rgb(0, 39, 195);
+  color: rgb(255, 255, 255);
 }
 
 body {
-  background-color: #f0f0f0;
-  color: #333333;
+  background-color: #333333;
+  color: #f0f0f0;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
@@ -469,7 +469,7 @@ body {
   }
 }
 .profile {
-  background-color: #f0f0f0;
+  background-color: #333333;
 }
 .profile h2,
 .profile p {
@@ -488,7 +488,7 @@ body {
 }
 
 .works {
-  background-color: #f0f0f0;
+  background-color: #333333;
   display: grid;
   grid-template-columns: 1fr;
 }
@@ -501,7 +501,7 @@ body {
   transition: background-color 0.3s ease;
 }
 .work-item:hover {
-  background-color: #f0f0f0;
+  background-color: #333333;
 }
 .work-item .thumbnail,
 .work-item .overlay {
@@ -546,13 +546,13 @@ body {
   align-self: self-end;
   position: sticky;
   bottom: 3rem;
-  background-color: rgb(0, 96, 185);
+  background-color: rgb(57, 159, 255);
   color: white;
   z-index: 999;
 }
 
 .header {
-  background-color: #f0f0f0;
+  background-color: #333333;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -568,7 +568,7 @@ body {
 }
 
 .footer {
-  background-color: #f0f0f0;
+  background-color: #333333;
   padding: 16px;
   text-align: center;
   border-top: 2px solid #e0e0e0;
@@ -583,7 +583,7 @@ body {
   .mobile-nav {
     display: flex;
     justify-content: space-around;
-    background-color: #f0f0f0;
+    background-color: #333333;
     padding: 10px 0;
     position: fixed;
     bottom: 0;
