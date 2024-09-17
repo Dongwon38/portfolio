@@ -3,6 +3,7 @@ import sample from "../assets/sample.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faSquareGithub } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import WorkItem from "../components/WorkItem";
 
 function PageHome() {
   return (
@@ -27,54 +28,9 @@ function PageHome() {
         <div className="works-inner-container">
           <h2>Works</h2>
           <ul className="work-list">
-            <a href="./work/1">
-              <section className="work-item">
-                <img className="thumbnail" src={sample} alt="sample-bg" />
-                <div className="overlay">
-                  <h3 className="title">Project 1 Title</h3>
-                  <p className="excerpt">
-                    put an one line explanation here within 50 letters
-                  </p>
-                  <div className="skill-box">
-                    <div className="skill">React</div>
-                    <div className="skill">Sass</div>
-                    <div className="skill">Javascript</div>
-                  </div>
-                </div>
-              </section>
-            </a>
-            <a href="./work/2">
-              <section className="work-item">
-                <img className="thumbnail" src={sample} alt="sample-bg" />
-                <div className="overlay">
-                  <h3 className="title">Project 1 Title</h3>
-                  <p className="overview">
-                    put an one line explanation here within 50 letters
-                  </p>
-                  <div className="skill-box">
-                    <div className="skill">React</div>
-                    <div className="skill">Sass</div>
-                    <div className="skill">Javascript</div>
-                  </div>
-                </div>
-              </section>
-            </a>
-            <a href="./work/3">
-              <section className="work-item">
-                <img className="thumbnail" src={sample} alt="sample-bg" />
-                <div className="overlay">
-                  <h3 className="title">Project 1 Title</h3>
-                  <p className="overview">
-                    put an one line explanation here within 50 letters
-                  </p>
-                  <div className="skill-box">
-                    <div className="skill">React</div>
-                    <div className="skill">Sass</div>
-                    <div className="skill">Javascript</div>
-                  </div>
-                </div>
-              </section>
-            </a>
+            <WorkItem />
+            <WorkItem />
+            <WorkItem />
           </ul>
         </div>
       </section>
