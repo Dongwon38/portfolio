@@ -31,7 +31,7 @@ function Header() {
   }
 
   return (
-    <header className="header">
+    <header className="header" id="header">
       <div
         className={isScrolled ? "logo-box scrolled" : "logo-box"}
         onClick={scrollToTop}

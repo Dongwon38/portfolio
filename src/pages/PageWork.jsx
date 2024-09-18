@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 
 function PageWork() {
   const { id } = useParams();
+
   return (
     <main className="main-work">
       <h1 className="title">Work {id}</h1>
@@ -26,6 +27,7 @@ function PageWork() {
         <a href="">Live site</a>
         <a href="">code</a>
       </div>
+      <div class="link-otherworks"></div>
     </main>
   );
 }

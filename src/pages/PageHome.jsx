@@ -1,39 +1,21 @@
 import React from "react";
 import sample from "../assets/sample.jpg";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedin, faSquareGithub } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import WorkItem from "../components/WorkItem";
+import Worklist from "../components/Worklist";
+import About from "../components/About";
+import Contact from "../components/Contact";
 
 function PageHome() {
   return (
-    <main className="main-home">
-      <section className="profile">
+    <main className="main-home" id="main-home">
+      <section className="hero-section" id="hero-section">
         <h1>Dong-won Kang</h1>
         <h2>Front-end Web Developer</h2>
         <p>I build end user-focused web experiences with precision and care.</p>
-        <div className="contact-box">
-          <a href="mailto:dongwon.dwk@gmail.com">
-            <FontAwesomeIcon icon={faEnvelope} />
-          </a>
-          <a href="https://github.com/Dongwon38">
-            <FontAwesomeIcon icon={faSquareGithub} />
-          </a>
-          <a href="https://www.linkedin.com/in/dong-won-kang/">
-            <FontAwesomeIcon icon={faLinkedin} />
-          </a>
-        </div>
+        <button>See Works</button>
       </section>
-      <section className="works">
-        <div className="works-inner-container">
-          <h2>Works</h2>
-          <ul className="work-list">
-            <WorkItem />
-            <WorkItem />
-            <WorkItem />
-          </ul>
-        </div>
-      </section>
+      <Worklist />
+      <About />
+      <Contact />
     </main>
   );
 }

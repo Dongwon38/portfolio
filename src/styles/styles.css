@@ -451,7 +451,7 @@ body {
   margin-top: 4.5rem;
 }
 
-.profile,
+.hero-section,
 .works {
   width: 100%;
   margin-bottom: 20px;
@@ -482,16 +482,16 @@ body {
     display: none;
   }
 }
-.profile h2,
-.profile p {
+.hero-section h2,
+.hero-section p {
   margin-top: 0.5rem;
 }
-.profile .contact-box {
+.hero-section .contact-box {
   display: flex;
   gap: 1rem;
   margin-top: 2rem;
 }
-.profile .contact-box a {
+.hero-section .contact-box a {
   display: flex;
   justify-content: center;
   align-items: center;
