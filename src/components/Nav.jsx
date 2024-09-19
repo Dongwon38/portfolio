@@ -1,10 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import iconHome from "../assets/icons/house-solid.svg";
-import iconWork from "../assets/icons/briefcase-solid.svg";
-import iconAbout from "../assets/icons/user-solid.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedin, faSquareGithub } from "@fortawesome/free-brands-svg-icons";
 import {
   faHouse,
   faFolder,

@@ -1,0 +1,43 @@
+@use "../base/vars" as *;
+@use "../base/mixins" as *;
+
+.email-btn-container {
+  position: relative;
+  display: inline-block;
+}
+
+.alert-box {
+  position: absolute;
+  background-color: #4caf50;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  animation: fadeInOut 2s forwards; /* 애니메이션 시간을 3초로 연장 */
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(-25px);
+  }
+  15% {
+    opacity: 1;
+    transform: translateY(-30px);
+  }
+  50% {
+    opacity: 1; /* 중간 구간에서 더 오래 머무름 */
+    transform: translateY(-30px);
+  }
+  60% {
+    opacity: 0.5; /* 사라지기 시작하는 구간을 천천히 */
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-70px);
+  }
+}

@@ -17,7 +17,6 @@ function PageWork() {
         accusantium, minus aliquam laboriosam autem nostrum iste cum explicabo
         laborum perspiciatis dicta.
       </p>
-      <h2>Skills</h2>
       <div className="skill-box">
         <div className="skill">React</div>
         <div className="skill">Sass</div>
