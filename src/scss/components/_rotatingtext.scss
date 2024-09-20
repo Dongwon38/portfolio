@@ -1,0 +1,78 @@
+@use "../base/vars" as *;
+@use "../base/mixins" as *;
+.rotating-text {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 6rem;
+  margin-bottom: 3rem;
+  height: 3rem;
+  max-width: 24rem;
+  font-size: 1rem;
+}
+
+.rotating-text p {
+  margin: 0;
+}
+
+.left-text {
+  padding-right: 0.5rem;
+}
+
+.right-text {
+  padding-left: 0.5rem;
+}
+
+.rotating-word-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 6rem;
+  height: 100%;
+  overflow: hidden;
+}
+
+.rotating-word {
+  position: absolute;
+  font-weight: 600;
+  animation: rotateWords 9s infinite;
+  opacity: 0;
+  color: $color-theme-secondary;
+}
+
+.rotating-word:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.rotating-word:nth-child(2) {
+  animation-delay: 3s;
+}
+
+.rotating-word:nth-child(3) {
+  animation-delay: 6s;
+}
+
+@keyframes rotateWords {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  30% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  40% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 0;
+  }
+}

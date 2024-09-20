@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import logo from "../assets/logo-v2.2.png";
+import { Link } from "react-router-dom";
 
 function Header() {
+  // animation on logo when scroll down
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // scroll Effect
+  // if scroll down from the top
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -14,6 +16,7 @@ function Header() {
       }
     };
 
+    // event listener on window
     window.addEventListener("scroll", handleScroll);
 
     // Cleanup
@@ -22,7 +25,7 @@ function Header() {
     };
   }, []);
 
-  // To Top
+  // Scroll To Top
   function scrollToTop() {
     window.scrollTo({
       top: 0,
@@ -36,7 +39,9 @@ function Header() {
         className={isScrolled ? "logo-box scrolled" : "logo-box"}
         onClick={scrollToTop}
       >
-        <img src={logo} alt="" />
+        <Link to="/">
+          <img src={logo} alt="" />
+        </Link>
       </div>
     </header>
   );

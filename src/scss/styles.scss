@@ -6,6 +6,7 @@
 
 // pages
 @use "./pages/home";
+@use "./pages/work";
 
 // components
 @use "./components/scroll";
@@ -14,5 +15,6 @@
 @use "./components/nav";
 @use "./components/about";
 @use "./components/contact";
+@use "./components/rotatingtext";
 
 // @use "./components/scroll-progress-bar";

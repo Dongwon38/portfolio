@@ -3,21 +3,21 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faSquareGithub } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
-function Contact() {
+function ContactDesktop() {
   const [showAlert, setShowAlert] = useState(false);
   function copyEmail() {
     const myEmail = "dongwon.dwk@gmail.com";
-
     navigator.clipboard.writeText(myEmail);
-
-    setShowAlert(true);
-    setTimeout(() => {
-      setShowAlert(false);
-    }, 1000);
+    if (showAlert != true) {
+      setShowAlert(true);
+      setTimeout(() => {
+        setShowAlert(false);
+      }, 1500);
+    }
   }
 
   return (
-    <section className="contact-section" id="contact-section">
+    <section className="contact-section desktop" id="contact-section-desktop">
       <h2>Contact</h2>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
@@ -25,6 +25,10 @@ function Contact() {
         maiores ad eaque expedita dicta aliquid dolores assumenda in possimus
         numquam similique!
       </p>
+      <div className="email-btn-container">
+        {showAlert && <span className="alert-box">Copied!</span>}
+        <button onClick={copyEmail}>Copy Email</button>
+      </div>
       <div className="contact-box">
         <a href="mailto:dongwon.dwk@gmail.com">
           <FontAwesomeIcon icon={faEnvelope} />
@@ -36,12 +40,8 @@ function Contact() {
           <FontAwesomeIcon icon={faLinkedin} />
         </a>
       </div>
-      <div className="email-btn-container">
-        <button onClick={copyEmail}>Copy my Email!</button>
-        {showAlert && <span className="alert-box">Email Copied!</span>}
-      </div>
     </section>
   );
 }
 
-export default Contact;
+export default ContactDesktop;

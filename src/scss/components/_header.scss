@@ -4,8 +4,8 @@
 .header {
   display: flex;
   width: 100%;
+  max-width: $max-width;
   justify-content: space-between;
-  // align-items: center;
   height: 4.5rem;
   position: fixed;
   top: 0;
@@ -29,13 +29,35 @@
   }
 }
 
-.logo-box.scrolled {
-  background-color: #fbbc04;
-  width: 1rem;
-  height: 1rem;
-  border-radius: 50%;
-  overflow: hidden;
-  img {
-    opacity: 0;
+// works on mobile, tablet size
+@media (max-width: $desktop) {
+  .logo-box.scrolled {
+    background-color: #fbbc04;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    overflow: hidden;
+    img {
+      opacity: 0;
+    }
+  }
+}
+
+@media (min-width: $tablet) {
+  .header {
+    height: 48px;
+  }
+  .logo-box {
+    margin: 24px 24px;
+  }
+}
+@media (min-width: $desktop) {
+  .header {
+    margin: 0 4rem;
+  }
+}
+@media (min-width: $desktop-wide) {
+  .header {
+    margin: 0 6rem;
   }
 }

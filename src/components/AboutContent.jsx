@@ -1,17 +1,15 @@
 import React, { useState } from "react";
 
-function About() {
+function AboutContent() {
+  // Accordion state
   const [activeIndex, setActiveIndex] = useState(false);
 
-  function toggleAccordion(index) {
-    if (activeIndex === index) {
-      setActiveIndex(null);
-    } else {
-      setActiveIndex(index);
-    }
+  function handleAccordionToggle(index) {
+    setActiveIndex(activeIndex === index ? null : index);
   }
+
   return (
-    <section className="about-section" id="about-section">
+    <>
       <h2>About</h2>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae quaerat
@@ -21,7 +19,10 @@ function About() {
       </p>
       <div className="accordion">
         <div className="accordion-item">
-          <div className="accordion-title" onClick={() => toggleAccordion(0)}>
+          <div
+            className="accordion-title"
+            onClick={() => handleAccordionToggle(0)}
+          >
             <div>Title 1</div>
             <div>{activeIndex === 0 ? "-" : "+"}</div>
           </div>
@@ -38,7 +39,10 @@ function About() {
         </div>
 
         <div className="accordion-item">
-          <div className="accordion-title" onClick={() => toggleAccordion(1)}>
+          <div
+            className="accordion-title"
+            onClick={() => handleAccordionToggle(1)}
+          >
             <div>Title 2</div>
             <div>{activeIndex === 1 ? "-" : "+"}</div>
           </div>
@@ -55,7 +59,10 @@ function About() {
         </div>
 
         <div className="accordion-item">
-          <div className="accordion-title" onClick={() => toggleAccordion(2)}>
+          <div
+            className="accordion-title"
+            onClick={() => handleAccordionToggle(2)}
+          >
             <div>Title 3</div>
             <div>{activeIndex === 2 ? "-" : "+"}</div>
           </div>
@@ -72,8 +79,8 @@ function About() {
           )}
         </div>
       </div>
-    </section>
+    </>
   );
 }
 
-export default About;
+export default AboutContent;

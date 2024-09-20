@@ -13,13 +13,13 @@ body {
   padding: 0;
 }
 
+// ============ Page Home Layout ============ //
 .main-home {
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 3rem 1.5rem;
-  max-width: 75rem;
-  margin-top: 4.5rem; // header height
+  max-width: $max-width;
 }
 
 .hero-section,
@@ -28,16 +28,36 @@ body {
   margin-bottom: 20px;
 }
 
+.left-screen {
+  margin-top: 4.5rem;
+}
+
 @media (min-width: $desktop) {
   .main-home {
-    display: grid;
-    grid-template-columns: 2.5fr 3.5fr;
-    gap: 2rem;
-    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: row;
     height: 100vh;
-    margin-top: 0;
+    overflow: hidden;
+    padding: 0 1.5rem;
+    gap: 1rem;
   }
-  .profile {
+  .left-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: sticky;
+    overflow: hidden;
+    height: 100vh;
+    width: 45%;
+    margin: 0;
+    padding-bottom: 4.5rem;
+  }
+  .right-screen {
+    width: 55%;
+    height: 100vh;
+    overflow-y: auto;
+  }
+  .hero-section {
     margin-top: 4.5rem;
     padding: 1.5rem 0;
   }
@@ -54,22 +74,61 @@ body {
   }
 }
 
-// ============ Profile ============ //
+@media (min-width: $desktop) {
+  .main-home {
+    margin: 0 0 0 4rem;
+  }
+  .side-nav {
+    width: 4rem;
+    background-color: aliceblue;
+  }
+}
+
+@media (min-width: $desktop-wide) {
+  .main-home {
+    margin: 0 0 0 6rem;
+  }
+  .side-nav {
+    width: 6rem;
+  }
+}
+
+// ============ Hero Section ============ //
 
 .hero-section {
-  h2,
+  height: calc(100vh - 4rem - 4.5rem - 3.625rem);
+  display: flex;
+  flex-direction: column;
+  h2 {
+    margin-top: 1rem;
+    padding: 0;
+  }
   p {
-    margin-top: 0.5rem;
+    margin-top: 1.5rem;
   }
-  .contact-box {
-    display: flex;
-    gap: 1rem;
-    margin-top: 2rem;
-    a {
-      @include flex-center-center;
-      font-size: 20px;
-    }
+}
+
+.hero-section .nav-btn {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+}
+@media (min-width: $desktop) {
+  .hero-section .nav-btn {
+    display: none;
   }
+}
+
+.hero-section .btn-scroll-to-works {
+  padding: 12px;
+  width: 8rem;
+  border-radius: 3px;
+  background-color: #fbbc04;
+  color: #fff;
+  font-weight: 900;
+  text-align: center;
+
+  box-shadow: 3px 3px 0px #fff, 6px 6px 0px #ff3d00;
 }
 
 // ============ Works ============ //
@@ -142,4 +201,10 @@ body {
   color: white;
 
   z-index: $index-btn-live-chat;
+}
+
+.side-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }

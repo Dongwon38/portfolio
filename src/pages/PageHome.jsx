@@ -1,21 +1,60 @@
-import React from "react";
-import sample from "../assets/sample.jpg";
+import React, { useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import Worklist from "../components/Worklist";
-import About from "../components/About";
-import Contact from "../components/Contact";
+import AboutDesktop from "../components/AboutDesktop";
+import AboutMobile from "../components/AboutMobile";
+import ContactDesktop from "../components/ContactDesktop";
+import ContactMobile from "../components/ContactMobile";
+import RotatingText from "../components/RotatingText";
 
 function PageHome() {
+  // Scroll Effect
+  const rightScrollRef = useRef(null);
+
+  const handleWheel = (e) => {
+    if (rightScrollRef.current) {
+      rightScrollRef.current.scrollTop += e.deltaY;
+    }
+  };
+
   return (
     <main className="main-home" id="main-home">
-      <section className="hero-section" id="hero-section">
-        <h1>Dong-won Kang</h1>
-        <h2>Front-end Web Developer</h2>
-        <p>I build end user-focused web experiences with precision and care.</p>
-        <button>See Works</button>
-      </section>
-      <Worklist />
-      <About />
-      <Contact />
+      <div className="left-screen" onWheel={handleWheel}>
+        {/* hero-section */}
+        <section className="hero-section" id="hero-section">
+          <div>
+            <h1>Dong-won Kang</h1>
+            <h2>Front-end Web Developer</h2>
+            <p>
+              I build end user-focused web experiences with precision and care.
+            </p>
+            <RotatingText />
+          </div>
+          <Link to="/#works-section" className="nav-btn">
+            <p className="btn-scroll-to-works">See Works</p>
+          </Link>
+        </section>
+        {/* about-section for desktop */}
+        <AboutDesktop />
+        {/* contact-section for desktop */}
+        <ContactDesktop />
+      </div>
+      <div className="right-screen" ref={rightScrollRef}>
+        <Worklist />
+      </div>
+      {/* about-section for mobile */}
+      <AboutMobile />
+      {/* contact-section for mobile */}
+      <ContactMobile />
+      <nav className="side-nav">
+        <ul>
+          <li>work1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>5</li>
+        </ul>
+      </nav>
     </main>
   );
 }
