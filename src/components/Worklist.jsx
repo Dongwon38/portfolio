@@ -82,6 +82,44 @@ function Worklist() {
               </Link>
             </div>
           </section>
+          <section className="work-item">
+            <img className="thumbnail" src={sample} alt="sample-bg" />
+            <div className="overlay">
+              <Link to="/work/1">
+                <h3 className="title">Project 1 Title</h3>
+                <p className="excerpt">
+                  put an one line explanation here within 50 letters
+                </p>
+                <div className="skill-box">
+                  <div className="skill">React</div>
+                  <div className="skill">Sass</div>
+                  <div className="skill">Javascript</div>
+                </div>
+              </Link>
+              <Link to="/work/1">
+                <p>Read more</p>
+              </Link>
+            </div>
+          </section>
+          <section className="work-item">
+            <img className="thumbnail" src={sample} alt="sample-bg" />
+            <div className="overlay">
+              <Link to="/work/1">
+                <h3 className="title">Project 1 Title</h3>
+                <p className="excerpt">
+                  put an one line explanation here within 50 letters
+                </p>
+                <div className="skill-box">
+                  <div className="skill">React</div>
+                  <div className="skill">Sass</div>
+                  <div className="skill">Javascript</div>
+                </div>
+              </Link>
+              <Link to="/work/1">
+                <p>Read more</p>
+              </Link>
+            </div>
+          </section>
         </ul>
       </div>
     </section>

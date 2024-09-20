@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import Worklist from "../components/Worklist";
 import AboutDesktop from "../components/AboutDesktop";
@@ -6,6 +6,7 @@ import AboutMobile from "../components/AboutMobile";
 import ContactDesktop from "../components/ContactDesktop";
 import ContactMobile from "../components/ContactMobile";
 import RotatingText from "../components/RotatingText";
+import SideNav from "../components/SideNav";
 
 function PageHome() {
   // Scroll Effect
@@ -46,15 +47,7 @@ function PageHome() {
       <AboutMobile />
       {/* contact-section for mobile */}
       <ContactMobile />
-      <nav className="side-nav">
-        <ul>
-          <li>work1</li>
-          <li>2</li>
-          <li>3</li>
-          <li>4</li>
-          <li>5</li>
-        </ul>
-      </nav>
+      <SideNav />
     </main>
   );
 }

@@ -80,7 +80,6 @@ body {
   }
   .side-nav {
     width: 4rem;
-    background-color: aliceblue;
   }
 }
 
@@ -201,10 +200,4 @@ body {
   color: white;
 
   z-index: $index-btn-live-chat;
-}
-
-.side-nav {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
