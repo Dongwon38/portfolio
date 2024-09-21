@@ -40,7 +40,7 @@ body {
     height: 100vh;
     overflow: hidden;
     padding: 0 1.5rem;
-    gap: 1rem;
+    gap: 6rem;
   }
   .left-screen {
     display: flex;
@@ -52,11 +52,13 @@ body {
     width: 45%;
     margin: 0;
     padding-bottom: 4.5rem;
+    padding-right: 3rem;
   }
   .right-screen {
     width: 55%;
     height: 100vh;
     overflow-y: auto;
+    padding-left: 3rem;
   }
   .hero-section {
     margin-top: 4.5rem;
@@ -69,34 +71,19 @@ body {
   }
   .works-inner-container {
     padding: 6rem 0 24rem 0;
+    h2 {
+      padding: 0;
+    }
   }
   .scroll-progress-bar.desk-top.home {
     display: none;
   }
 }
 
-@media (min-width: $desktop) {
-  .main-home {
-    margin: 0 0 0 4rem;
-  }
-  .side-nav {
-    width: 4rem;
-  }
-}
-
-@media (min-width: $desktop-wide) {
-  .main-home {
-    margin: 0 0 0 6rem;
-  }
-  .side-nav {
-    width: 6rem;
-  }
-}
-
 // ============ Hero Section ============ //
 
 .hero-section {
-  height: calc(100vh - 4rem - 4.5rem - 3.625rem);
+  height: calc(100vh - 4rem - 4.5rem);
   display: flex;
   flex-direction: column;
   h2 {

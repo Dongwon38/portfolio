@@ -39,7 +39,6 @@ function PageHome() {
     let red = (gauge / 100) * 40;
     let green = (gauge / 100) * 100;
     let blue = (gauge / 100) * 255;
-    console.log(gauge);
     document.body.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
     if (gauge > 0) {
       const interval = setInterval(() => {
@@ -67,16 +66,18 @@ function PageHome() {
             <h1>Dong-won Kang</h1>
             <h2>Front-end Web Developer</h2>
             <p>
-              I build end user-focused web experiences with precision and care.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
+              nisi consequuntur iure et officia perferendis
             </p>
+            {/* about-section for desktop */}
+            <AboutDesktop />
             <RotatingText />
           </div>
           <Link to="/#works-section" className="nav-btn">
             <p className="btn-scroll-to-works">See Works</p>
           </Link>
         </section>
-        {/* about-section for desktop */}
-        <AboutDesktop />
+
         {/* contact-section for desktop */}
         <ContactDesktop />
       </div>

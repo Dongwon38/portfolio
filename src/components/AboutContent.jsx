@@ -14,8 +14,7 @@ function AboutContent() {
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae quaerat
         expedita voluptatum eligendi asperiores totam explicabo culpa ipsam
-        maiores veritatis nam non, alias excepturi repellendus, placeat autem
-        voluptates, facere illum.
+        maiores veritatis nam non,
       </p>
       <div className="accordion">
         <div className="accordion-item">
@@ -68,6 +67,46 @@ function AboutContent() {
           </div>
 
           {activeIndex !== 2 ? (
+            <div className="accordion-content"></div>
+          ) : (
+            <div className="accordion-content open">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores
+              voluptatum recusandae itaque similique labore molestias
+              consequuntur asperiores accusamus eum atque beatae, vitae at?
+              Minima, fugiat doloremque. Accusantium provident veniam quasi!
+            </div>
+          )}
+        </div>
+        <div className="accordion-item">
+          <div
+            className="accordion-title"
+            onClick={() => handleAccordionToggle(3)}
+          >
+            <div>Title 4</div>
+            <div>{activeIndex === 2 ? "-" : "+"}</div>
+          </div>
+
+          {activeIndex !== 3 ? (
+            <div className="accordion-content"></div>
+          ) : (
+            <div className="accordion-content open">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores
+              voluptatum recusandae itaque similique labore molestias
+              consequuntur asperiores accusamus eum atque beatae, vitae at?
+              Minima, fugiat doloremque. Accusantium provident veniam quasi!
+            </div>
+          )}
+        </div>
+        <div className="accordion-item">
+          <div
+            className="accordion-title"
+            onClick={() => handleAccordionToggle(4)}
+          >
+            <div>Title 5</div>
+            <div>{activeIndex === 2 ? "-" : "+"}</div>
+          </div>
+
+          {activeIndex !== 4 ? (
             <div className="accordion-content"></div>
           ) : (
             <div className="accordion-content open">
