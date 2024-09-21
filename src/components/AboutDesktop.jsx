@@ -14,8 +14,10 @@ function AboutDesktop() {
 
   return (
     <section className="about-section desktop" id="about-section-desktop">
-      <h2>About</h2>
-      <button onClick={handleOverlayToggle}>test button</button>
+      <button className="about-toggle-button" onClick={handleOverlayToggle}>
+        More about me
+      </button>
+
       <div
         className={
           isActiveOverlay ? "about-overlay activated" : "about-overlay"

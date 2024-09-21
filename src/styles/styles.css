@@ -398,6 +398,7 @@ h2 {
 
 p {
   font-size: 16px;
+  margin-top: 8px;
 }
 
 button {
@@ -479,7 +480,7 @@ body {
     height: 100vh;
     overflow: hidden;
     padding: 0 1.5rem;
-    gap: 1rem;
+    gap: 6rem;
   }
   .left-screen {
     display: flex;
@@ -491,11 +492,13 @@ body {
     width: 45%;
     margin: 0;
     padding-bottom: 4.5rem;
+    padding-right: 3rem;
   }
   .right-screen {
     width: 55%;
     height: 100vh;
     overflow-y: auto;
+    padding-left: 3rem;
   }
   .hero-section {
     margin-top: 4.5rem;
@@ -509,28 +512,15 @@ body {
   .works-inner-container {
     padding: 6rem 0 24rem 0;
   }
+  .works-inner-container h2 {
+    padding: 0;
+  }
   .scroll-progress-bar.desk-top.home {
     display: none;
   }
 }
-@media (min-width: 64em) {
-  .main-home {
-    margin: 0 0 0 4rem;
-  }
-  .side-nav {
-    width: 4rem;
-  }
-}
-@media (min-width: 85.375rem) {
-  .main-home {
-    margin: 0 0 0 6rem;
-  }
-  .side-nav {
-    width: 6rem;
-  }
-}
 .hero-section {
-  height: calc(100vh - 4rem - 4.5rem - 3.625rem);
+  height: calc(100vh - 4rem - 4.5rem);
   display: flex;
   flex-direction: column;
 }
@@ -647,16 +637,6 @@ body::-webkit-scrollbar {
     margin: 24px 24px;
   }
 }
-@media (min-width: 64em) {
-  .header {
-    margin: 0 4rem;
-  }
-}
-@media (min-width: 85.375rem) {
-  .header {
-    margin: 0 6rem;
-  }
-}
 .footer {
   background-color: #333;
   padding: 16px;
@@ -741,6 +721,50 @@ body::-webkit-scrollbar {
     display: none;
   }
 }
+.about-toggle-button {
+  color: white;
+  padding: 0;
+  margin: 1rem 0;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.about-overlay {
+  position: absolute;
+  top: 12rem;
+  width: 100%;
+  height: 50rem;
+  border: 1px solid #3c3c3c;
+  border-radius: 5px;
+  background-color: #111;
+  z-index: 20;
+  padding: 24px;
+  transform: translateY(200%);
+  transition: transform 0.5s ease-in;
+}
+
+.about-overlay.activated {
+  top: 12rem;
+  transform: translateY(0);
+  transition: transform 0.5s cubic-bezier(0.2, -0.25, 0.1, 1.2);
+}
+.about-overlay.activated h2 {
+  padding: 0;
+  margin: 0;
+}
+
+.about-overlay .close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.accordion {
+  margin: 1rem 0;
+}
+
 .accordion-item {
   border-bottom: 1px solid #ccc;
 }
@@ -766,34 +790,6 @@ body::-webkit-scrollbar {
   transition: max-height 0.6s ease;
 }
 
-.about-overlay {
-  position: absolute;
-  top: 11.3rem;
-  width: 100%;
-  height: 50rem;
-  border: 1px solid #3c3c3c;
-  border-radius: 5px;
-  background-color: #111;
-  z-index: 20;
-  padding: 24px;
-  transform: translateY(100%);
-  transition: transform 0.5s ease-in;
-}
-
-.about-overlay.activated {
-  top: 11.3rem;
-  transform: translateY(0);
-  transition: transform 0.5s cubic-bezier(0.2, -0.25, 0.1, 1.2);
-}
-
-.about-overlay .close-btn {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  font-size: 1.5rem;
-  color: white;
-}
-
 .contact-section.mobile {
   display: block;
 }
@@ -810,6 +806,19 @@ body::-webkit-scrollbar {
     display: block;
   }
 }
+.contact-section {
+  margin-bottom: 9rem;
+}
+
+.contact-box {
+  margin: 1rem 0;
+}
+
+.contact-box a {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+
 .email-btn-container {
   position: relative;
   display: inline-block;

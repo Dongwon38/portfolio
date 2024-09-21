@@ -1,6 +1,8 @@
 @use "../base/vars" as *;
 @use "../base/mixins" as *;
 
+// ============ default setting ============ //
+
 .contact-section.mobile {
   display: block;
 }
@@ -15,6 +17,23 @@
     display: block;
   }
 }
+
+// ============ Contact Layout ============ //
+
+.contact-section {
+  margin-bottom: 9rem;
+}
+
+.contact-box {
+  margin: 1rem 0;
+}
+
+.contact-box a {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+
+// ============ Email Copy Function ============ //
 
 .email-btn-container {
   position: relative;

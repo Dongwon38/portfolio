@@ -20,10 +20,8 @@ function ContactDesktop() {
     <section className="contact-section desktop" id="contact-section-desktop">
       <h2>Contact</h2>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
-        possimus sint id unde illo. Laudantium repudiandae, necessitatibus a
-        maiores ad eaque expedita dicta aliquid dolores assumenda in possimus
-        numquam similique!
+        I'm always excited to connect and chat about new opportunities or
+        anything related to design.
       </p>
       <div className="email-btn-container">
         {showAlert && <span className="alert-box">Copied!</span>}
