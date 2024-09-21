@@ -79,3 +79,9 @@ a:visited {
   color: rgb(255, 255, 255);
   text-decoration: none;
 }
+
+// ============ effect ============ //
+::selection {
+  background-color: $color-theme-primary;
+  color: black;
+}

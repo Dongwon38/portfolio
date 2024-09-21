@@ -1,15 +1,16 @@
-$color-bg-primary: #222;
+$color-bg-primary: #111;
 $color-font-primary: #f0f0f0;
 
 $color-bg-secondary: #333;
 $color-font-secondary: #fff;
 $color-border: #e0e0e0;
 
-$color-theme-primary: #fbbc04;
-$color-theme-secondary: #ff3d00;
+$color-theme-primary: #f5ec33;
+$color-theme-secondary: #30e6a3;
 $color-sample1: #00e99b;
 $color-sample2: #ff0000;
 $color-sample3: #0056df;
+$color-sample4: #e100ff;
 
 // Button colors
 $color-btn: linear-gradient(to right, #ff7e00 0%, #ff3d00 51%, #ff7e00 100%);
@@ -27,8 +28,6 @@ $tablet: 48em; // 768px
 $desktop: 64em; // 1024px
 $desktop-wide: 85.375rem; // 1366px
 
-$max-width: 100rem;
-
 // z-index
 $index-overlay: 2;
 $index-header: 10;
@@ -36,3 +35,7 @@ $index-nav: 10;
 $index-about-overlay: 20;
 $index-progressbar: 999;
 $index-btn-live-chat: 999;
+
+// vars
+$max-width: 100rem;
+$spacing: 4rem;
