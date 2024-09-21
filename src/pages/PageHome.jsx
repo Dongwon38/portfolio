@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import Worklist from "../components/Worklist";
 import AboutDesktop from "../components/AboutDesktop";
@@ -6,7 +6,6 @@ import AboutMobile from "../components/AboutMobile";
 import ContactDesktop from "../components/ContactDesktop";
 import ContactMobile from "../components/ContactMobile";
 import RotatingText from "../components/RotatingText";
-import SideNav from "../components/SideNav";
 
 function PageHome() {
   // Scroll Effect
@@ -18,8 +17,49 @@ function PageHome() {
     }
   };
 
+  // test
+  const [gauge, setGauge] = useState(0);
+  const [disablehandleGauge, setDisablehandleGauge] = useState(false);
+  function handleGauge() {
+    if (!disablehandleGauge && gauge < 100) {
+      setGauge((prev) => prev + 10);
+    }
+    if (gauge == 100) {
+      setDisablehandleGauge(true);
+      activeFullGauge();
+
+      const interval = setInterval(() => {
+        setDisablehandleGauge(false);
+        document.body.style.backgroundColor = `rgb(0, 0, 0)`;
+      }, 10000);
+      return () => clearInterval(interval);
+    }
+  }
+  useEffect(() => {
+    let red = (gauge / 100) * 40;
+    let green = (gauge / 100) * 100;
+    let blue = (gauge / 100) * 255;
+    console.log(gauge);
+    document.body.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+    if (gauge > 0) {
+      const interval = setInterval(() => {
+        setGauge((prev) => Math.max(prev - 20, 0));
+      }, 500);
+      return () => clearInterval(interval);
+    }
+  }, [gauge]);
+
+  function activeFullGauge() {
+    console.log("yes");
+  }
+
   return (
-    <main className="main-home" id="main-home">
+    <main
+      className="main-home"
+      id="main-home"
+      onClick={handleGauge}
+      onTouchStart={handleGauge}
+    >
       <div className="left-screen" onWheel={handleWheel}>
         {/* hero-section */}
         <section className="hero-section" id="hero-section">
@@ -47,7 +87,6 @@ function PageHome() {
       <AboutMobile />
       {/* contact-section for mobile */}
       <ContactMobile />
-      <SideNav />
     </main>
   );
 }
