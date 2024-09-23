@@ -16,6 +16,21 @@ function AboutContent() {
         expedita voluptatum eligendi asperiores totam explicabo culpa ipsam
         maiores veritatis nam non,
       </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae quaerat
+        expedita voluptatum eligendi asperiores totam explicabo culpa ipsam
+        maiores veritatis nam non,
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae quaerat
+        expedita voluptatum eligendi asperiores totam explicabo culpa ipsam
+        maiores veritatis nam non,
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae quaerat
+        expedita voluptatum eligendi asperiores totam explicabo culpa ipsam
+        maiores veritatis nam non,
+      </p>
       <div className="accordion">
         <div className="accordion-item">
           <div

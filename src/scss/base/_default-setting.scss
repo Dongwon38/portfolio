@@ -25,46 +25,18 @@ h1 {
 }
 
 h2 {
-  font-size: 18px;
+  font-size: 24px;
   letter-spacing: -0.4px;
-  font-weight: 900;
+  font-weight: 600;
   padding-top: 3rem;
 }
-
+h3 {
+  font-size: 20px;
+}
 p {
   font-size: 16px;
   margin-top: 8px;
-}
-
-// ============ Button ============ //
-button {
-  background-color: transparent;
-  border: none;
-}
-
-.btn-grad {
-  background-image: linear-gradient(
-    to right,
-    #da22ff 0%,
-    #9733ee 51%,
-    #da22ff 100%
-  );
-  margin: 10px;
-  padding: 15px 45px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: white;
-  box-shadow: 0 0 20px #eee;
-  border-radius: 10px;
-  display: block;
-}
-
-.btn-grad:hover {
-  background-position: right center; /* change the direction of the change here */
-  color: #fff;
-  text-decoration: none;
+  font-weight: 400;
 }
 
 // ============ list ============ //
@@ -85,4 +57,94 @@ a:visited {
 ::selection {
   background-color: $color-theme-primary;
   color: black;
+}
+
+// ============ Button ============ //
+button {
+  background-color: transparent;
+  border: none;
+}
+
+.btn-pushable {
+  position: relative;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  transition: filter 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.btn-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: hsl(0deg 0% 0% / 0.25);
+  will-change: transform;
+  transform: translateY(2px);
+  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+
+.btn-edge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: linear-gradient(
+    to left,
+    rgb(0, 80, 30) 0%,
+    rgb(0, 120, 50) 8%,
+    rgb(0, 120, 50) 92%,
+    rgb(0, 80, 30) 100%
+  );
+}
+
+.btn-front {
+  display: block;
+  position: relative;
+  padding: 12px 27px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  color: white;
+  background: #00ac47;
+  will-change: transform;
+  transform: translateY(-4px);
+  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+
+.btn-pushable:hover {
+  filter: brightness(110%);
+  -webkit-filter: brightness(110%);
+}
+
+.btn-pushable:hover .btn-front {
+  transform: translateY(-6px);
+  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+.btn-pushable:active .btn-front {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+
+.btn-pushable:hover .btn-shadow {
+  transform: translateY(4px);
+  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+.btn-pushable:active .btn-shadow {
+  transform: translateY(1px);
+  transition: transform 34ms;
+}
+
+.btn-pushable:focus:not(:focus-visible) {
+  outline: none;
 }

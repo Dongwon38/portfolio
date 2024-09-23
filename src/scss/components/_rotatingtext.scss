@@ -76,3 +76,9 @@
     opacity: 0;
   }
 }
+
+@media (min-width: $desktop) {
+  .rotating-text {
+    visibility: hidden;
+  }
+}

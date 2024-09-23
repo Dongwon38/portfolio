@@ -3,7 +3,7 @@ const RotatingText = () => {
 
   return (
     <div className="rotating-text">
-      <p className="left-text">I write {"["}</p>
+      <p className="left-text">I build {"["}</p>
       <div className="rotating-word-container">
         {words.map((word, index) => (
           <span key={index} className="rotating-word">

@@ -33,6 +33,17 @@
   padding: 0.5rem;
 }
 
+.contact-box a:nth-child(1) {
+  padding-left: 0;
+}
+
+// ============ Contact Desktop ============ //
+.contact-section.desktop {
+  p {
+    max-width: 24rem;
+  }
+}
+
 // ============ Email Copy Function ============ //
 
 .email-btn-container {
@@ -40,9 +51,16 @@
   display: inline-block;
 }
 
+.email-btn-container button {
+  color: white;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 1rem 0;
+}
+
 .alert-box {
   position: absolute;
-  background-color: #4caf50;
+  background-color: $color-theme-primary;
   color: white;
   padding: 5px 10px;
   border-radius: 5px;

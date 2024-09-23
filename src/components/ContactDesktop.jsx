@@ -20,13 +20,14 @@ function ContactDesktop() {
     <section className="contact-section desktop" id="contact-section-desktop">
       <h2>Contact</h2>
       <p>
-        I'm always excited to connect and chat about new opportunities or
-        anything related to design.
+        I always excited to hear people's stories - anything related to coding,
+        design, business, or new opportunities!
       </p>
       <div className="email-btn-container">
         {showAlert && <span className="alert-box">Copied!</span>}
         <button onClick={copyEmail}>Copy Email</button>
       </div>
+
       <div className="contact-box">
         <a href="mailto:dongwon.dwk@gmail.com">
           <FontAwesomeIcon icon={faEnvelope} />

@@ -26,22 +26,22 @@ function Worklist() {
         <ul className="work-list">
           <section className="work-item">
             <img className="thumbnail" src={sample} alt="sample-bg" />
-            <div className="overlay">
-              <Link to="/work/1">
-                <h3 className="title">Project 1 Title</h3>
+            <Link to="/work/1">
+              <div className="overlay">
+                <h3 className="title">Movie-Pin</h3>
+
                 <p className="excerpt">
-                  put an one line explanation here within 50 letters
+                  Movie search website created using React and a REST API
                 </p>
+
                 <div className="skill-box">
                   <div className="skill">React</div>
                   <div className="skill">Sass</div>
                   <div className="skill">Javascript</div>
                 </div>
-              </Link>
-              <Link to="/work/1">
-                <p>Read more</p>
-              </Link>
-            </div>
+                <span className="link-text">Read more</span>
+              </div>
+            </Link>
           </section>
           <section className="work-item">
             <img className="thumbnail" src={sample} alt="sample-bg" />

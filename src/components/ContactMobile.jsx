@@ -20,7 +20,8 @@ function ContactMobile() {
     <section className="contact-section mobile" id="contact-section-mobile">
       <h2>Contact</h2>
       <p>
-        Feel free to Contact me and I will get back to you as soon as possible
+        I'm always excited to hear people's stories - anything related to
+        coding, design, business, or new opportunities!
       </p>
       <div className="email-btn-container">
         {showAlert && <span className="alert-box">Copied!</span>}

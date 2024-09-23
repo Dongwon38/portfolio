@@ -390,40 +390,20 @@ h1 {
 }
 
 h2 {
-  font-size: 18px;
+  font-size: 24px;
   letter-spacing: -0.4px;
-  font-weight: 900;
+  font-weight: 600;
   padding-top: 3rem;
+}
+
+h3 {
+  font-size: 20px;
 }
 
 p {
   font-size: 16px;
   margin-top: 8px;
-}
-
-button {
-  background-color: transparent;
-  border: none;
-}
-
-.btn-grad {
-  background-image: linear-gradient(to right, #da22ff 0%, #9733ee 51%, #da22ff 100%);
-  margin: 10px;
-  padding: 15px 45px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: white;
-  box-shadow: 0 0 20px #eee;
-  border-radius: 10px;
-  display: block;
-}
-
-.btn-grad:hover {
-  background-position: right center; /* change the direction of the change here */
-  color: #fff;
-  text-decoration: none;
+  font-weight: 400;
 }
 
 ul,
@@ -440,12 +420,95 @@ a:visited {
 }
 
 ::selection {
-  background-color: #f5ec33;
+  background-color: #00ac47;
   color: black;
 }
 
+button {
+  background-color: transparent;
+  border: none;
+}
+
+.btn-pushable {
+  position: relative;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  transition: filter 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.btn-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: hsla(0, 0%, 0%, 0.25);
+  will-change: transform;
+  transform: translateY(2px);
+  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+
+.btn-edge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: linear-gradient(to left, rgb(0, 80, 30) 0%, rgb(0, 120, 50) 8%, rgb(0, 120, 50) 92%, rgb(0, 80, 30) 100%);
+}
+
+.btn-front {
+  display: block;
+  position: relative;
+  padding: 12px 27px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  color: white;
+  background: #00ac47;
+  will-change: transform;
+  transform: translateY(-4px);
+  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+
+.btn-pushable:hover {
+  filter: brightness(110%);
+  -webkit-filter: brightness(110%);
+}
+
+.btn-pushable:hover .btn-front {
+  transform: translateY(-6px);
+  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+.btn-pushable:active .btn-front {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+
+.btn-pushable:hover .btn-shadow {
+  transform: translateY(4px);
+  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+.btn-pushable:active .btn-shadow {
+  transform: translateY(1px);
+  transition: transform 34ms;
+}
+
+.btn-pushable:focus:not(:focus-visible) {
+  outline: none;
+}
+
 body {
-  color: #f0f0f0;
+  color: #cccccc;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
@@ -480,7 +543,7 @@ body {
     height: 100vh;
     overflow: hidden;
     padding: 0 1.5rem;
-    gap: 6rem;
+    gap: 3rem;
   }
   .left-screen {
     display: flex;
@@ -492,7 +555,6 @@ body {
     width: 45%;
     margin: 0;
     padding-bottom: 4.5rem;
-    padding-right: 3rem;
   }
   .right-screen {
     width: 55%;
@@ -530,6 +592,7 @@ body {
 }
 .hero-section p {
   margin-top: 1.5rem;
+  max-width: 24rem;
 }
 
 .hero-section .nav-btn {
@@ -545,12 +608,10 @@ body {
 .hero-section .btn-scroll-to-works {
   padding: 12px;
   width: 8rem;
-  border-radius: 3px;
-  background-color: #f5ec33;
-  color: #fff;
-  font-weight: 900;
+  border-radius: 5px;
+  background-color: #00ac47;
+  color: white;
   text-align: center;
-  box-shadow: 3px 3px 0px #fff, 6px 6px 0px #30e6a3;
 }
 
 .main-work {
@@ -561,8 +622,8 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  height: 2px;
-  background-color: #f5ec33;
+  height: 4px;
+  background-color: #00ac47;
   z-index: 999;
   transition: width 0.3s ease;
 }
@@ -602,9 +663,10 @@ body::-webkit-scrollbar {
 }
 
 .logo-box {
-  background-color: #fbbc04;
+  background-color: #00ac47;
   width: 3rem;
   height: 3rem;
+  border-radius: 3px;
   margin-top: 24px;
   margin-left: 24px;
   transition: border-radius 0.2s ease, width 0.3s ease, height 0.3s ease, background-color 0.3s ease;
@@ -619,7 +681,7 @@ body::-webkit-scrollbar {
 
 @media (max-width: 64em) {
   .logo-box.scrolled {
-    background-color: #fbbc04;
+    background-color: #00ac47;
     width: 1rem;
     height: 1rem;
     border-radius: 50%;
@@ -637,8 +699,13 @@ body::-webkit-scrollbar {
     margin: 24px 24px;
   }
 }
+@media (min-width: 64em) {
+  .logo-box {
+    display: none;
+  }
+}
 .footer {
-  background-color: #333;
+  background-color: #000;
   padding: 16px;
   text-align: center;
   border-top: 2px solid #e0e0e0;
@@ -650,6 +717,8 @@ body::-webkit-scrollbar {
   background-color: #333;
   padding: 10px 0;
   position: fixed;
+  right: 0;
+  left: 0;
   bottom: 0;
   width: 100%;
   height: 58px;
@@ -661,18 +730,15 @@ body::-webkit-scrollbar {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 4rem;
   text-decoration: none;
   color: #999;
   cursor: pointer;
 }
 .mobile-nav .nav-btn:hover {
-  color: #30e6a3;
+  color: #00ff6a;
 }
 
 .mobile-nav img {
-  width: 1.5rem;
-  height: 1.5rem;
   filter: invert(95%) sepia(95%) saturate(20%) hue-rotate(289deg) brightness(104%) contrast(106%);
 }
 
@@ -697,7 +763,7 @@ body::-webkit-scrollbar {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f5ec33;
+    background-color: #00ac47;
     padding: 12px 24px;
   }
   .desktop-nav .nav-btn .icon-label {
@@ -736,7 +802,7 @@ body::-webkit-scrollbar {
   height: 50rem;
   border: 1px solid #3c3c3c;
   border-radius: 5px;
-  background-color: #111;
+  background-color: #000;
   z-index: 20;
   padding: 24px;
   transform: translateY(200%);
@@ -819,14 +885,29 @@ body::-webkit-scrollbar {
   padding: 0.5rem;
 }
 
+.contact-box a:nth-child(1) {
+  padding-left: 0;
+}
+
+.contact-section.desktop p {
+  max-width: 24rem;
+}
+
 .email-btn-container {
   position: relative;
   display: inline-block;
 }
 
+.email-btn-container button {
+  color: white;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 1rem 0;
+}
+
 .alert-box {
   position: absolute;
-  background-color: #4caf50;
+  background-color: #00ac47;
   color: white;
   padding: 5px 10px;
   border-radius: 5px;
@@ -892,7 +973,7 @@ body::-webkit-scrollbar {
   font-weight: 600;
   animation: rotateWords 9s infinite;
   opacity: 0;
-  color: #30e6a3;
+  color: #00ff6a;
 }
 
 .rotating-word:nth-child(1) {
@@ -926,6 +1007,11 @@ body::-webkit-scrollbar {
   }
   100% {
     opacity: 0;
+  }
+}
+@media (min-width: 64em) {
+  .rotating-text {
+    visibility: hidden;
   }
 }
 particle {
@@ -966,8 +1052,20 @@ particle {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  color: #fff;
+  color: #cccccc;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.9) 100%);
+  cursor: default;
+}
+
+.link-text {
+  margin-top: 8px;
+  margin-left: 4px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.overlay:hover .link-text {
+  color: #00ff6a;
 }
 
 .skill-box {

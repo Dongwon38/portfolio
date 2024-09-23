@@ -7,7 +7,7 @@
   grid-template-columns: 1fr;
 }
 
-// ============ Work-Item ============ //
+// ============ Work-Item Layout ============ //
 .work-item {
   height: 25rem;
   position: relative;
@@ -33,17 +33,29 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    color: $color-font-secondary;
+    color: $color-font-primary;
     background: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0) 30%,
       rgba(0, 0, 0, 0.9) 100%
     );
+    cursor: default;
   }
 }
-// TEST =========================================
 
-// TEST =========================================
+// ============ Work-Item detail ============ //
+
+.link-text {
+  margin-top: 8px;
+  margin-left: 4px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.overlay:hover {
+  .link-text {
+    color: $color-theme-secondary;
+  }
+}
 
 .skill-box {
   display: flex;

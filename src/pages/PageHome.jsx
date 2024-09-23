@@ -36,9 +36,9 @@ function PageHome() {
     }
   }
   useEffect(() => {
-    let red = (gauge / 100) * 40;
-    let green = (gauge / 100) * 100;
-    let blue = (gauge / 100) * 255;
+    let red = 30 + (gauge / 100) * 40;
+    let green = 30 + (gauge / 100) * 100;
+    let blue = 30 + (gauge / 100) * 255;
     document.body.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
     if (gauge > 0) {
       const interval = setInterval(() => {
@@ -62,19 +62,24 @@ function PageHome() {
       <div className="left-screen" onWheel={handleWheel}>
         {/* hero-section */}
         <section className="hero-section" id="hero-section">
-          <div>
+          <div className="hero-content">
             <h1>Dong-won Kang</h1>
             <h2>Front-end Web Developer</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
               nisi consequuntur iure et officia perferendis
             </p>
+
             {/* about-section for desktop */}
             <AboutDesktop />
             <RotatingText />
           </div>
           <Link to="/#works-section" className="nav-btn">
-            <p className="btn-scroll-to-works">See Works</p>
+            <button class="btn-pushable">
+              <span class="btn-shadow"></span>
+              <span class="btn-edge"></span>
+              <span class="btn-front text">See Works</span>
+            </button>
           </Link>
         </section>
 

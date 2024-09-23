@@ -3,7 +3,6 @@
 
 // ============ Site Layout ============ //
 body {
-  // background-color: $color-bg-primary;
   color: $color-font-primary;
   box-sizing: border-box;
   display: flex;
@@ -40,7 +39,7 @@ body {
     height: 100vh;
     overflow: hidden;
     padding: 0 1.5rem;
-    gap: 6rem;
+    gap: 3rem;
   }
   .left-screen {
     display: flex;
@@ -52,7 +51,6 @@ body {
     width: 45%;
     margin: 0;
     padding-bottom: 4.5rem;
-    padding-right: 3rem;
   }
   .right-screen {
     width: 55%;
@@ -92,6 +90,7 @@ body {
   }
   p {
     margin-top: 1.5rem;
+    max-width: 24rem;
   }
 }
 
@@ -110,8 +109,8 @@ body {
   width: 8rem;
   border-radius: 5px;
   background-color: $color-theme-primary;
-  color: #fff;
-  font-weight: 900;
+  color: white;
+
   text-align: center;
-  box-shadow: 3px 3px 0px #fff, 6px 6px 0px $color-theme-secondary;
+  // box-shadow: 3px 3px 0px $color-theme-secondary;
 }
