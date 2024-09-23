@@ -10,7 +10,9 @@ function AboutContent() {
 
   return (
     <>
-      <h2>About</h2>
+      <h2>
+        About<span className="center-line"></span>
+      </h2>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae quaerat
         expedita voluptatum eligendi asperiores totam explicabo culpa ipsam

@@ -57,6 +57,9 @@
   cursor: pointer;
   padding: 1rem 0;
 }
+.email-btn-container button:hover {
+  color: $color-theme-secondary;
+}
 
 .alert-box {
   position: absolute;
@@ -85,4 +88,18 @@
     opacity: 0;
     transform: translateY(-15px);
   }
+}
+
+// test center-line
+
+.works-inner-container h2,
+.about-section h2,
+.contact-section h2 {
+  @include flex-center-center;
+}
+.center-line {
+  width: 100%;
+  margin-left: 2rem;
+  height: 1px;
+  background-color: $color-font-primary;
 }

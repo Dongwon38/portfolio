@@ -20,18 +20,19 @@ p {
 h1 {
   font-size: 48px;
   letter-spacing: -0.6px;
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1;
 }
 
 h2 {
   font-size: 24px;
   letter-spacing: -0.4px;
-  font-weight: 600;
+  font-weight: 700;
   padding-top: 3rem;
 }
 h3 {
   font-size: 20px;
+  font-weight: 700;
 }
 p {
   font-size: 16px;
@@ -55,8 +56,8 @@ a:visited {
 
 // ============ effect ============ //
 ::selection {
-  background-color: $color-theme-primary;
-  color: black;
+  background-color: #ffd700;
+  color: $color-bg-primary;
 }
 
 // ============ Button ============ //

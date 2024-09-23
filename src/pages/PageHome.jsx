@@ -64,7 +64,9 @@ function PageHome() {
         <section className="hero-section" id="hero-section">
           <div className="hero-content">
             <h1>Dong-won Kang</h1>
-            <h2>Front-end Web Developer</h2>
+            <h2>
+              Front-end Web Developer <span className="center-line"></span>
+            </h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
               nisi consequuntur iure et officia perferendis
@@ -75,10 +77,10 @@ function PageHome() {
             <RotatingText />
           </div>
           <Link to="/#works-section" className="nav-btn">
-            <button class="btn-pushable">
-              <span class="btn-shadow"></span>
-              <span class="btn-edge"></span>
-              <span class="btn-front text">See Works</span>
+            <button className="btn-pushable">
+              <span className="btn-shadow"></span>
+              <span className="btn-edge"></span>
+              <span className="btn-front text">See Works</span>
             </button>
           </Link>
         </section>

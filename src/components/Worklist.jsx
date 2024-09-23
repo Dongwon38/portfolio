@@ -22,7 +22,9 @@ function Worklist() {
   return (
     <section className="works-section" id="works-section">
       <div className="works-inner-container">
-        <h2>Works</h2>
+        <h2>
+          Works<span className="center-line"></span>
+        </h2>
         <ul className="work-list">
           <section className="work-item">
             <img className="thumbnail" src={sample} alt="sample-bg" />
@@ -56,9 +58,7 @@ function Worklist() {
                   <div className="skill">Sass</div>
                   <div className="skill">Javascript</div>
                 </div>
-              </Link>
-              <Link to="/work/1">
-                <p>Read more</p>
+                <span className="link-text">Read more</span>
               </Link>
             </div>
           </section>
@@ -75,9 +75,7 @@ function Worklist() {
                   <div className="skill">Sass</div>
                   <div className="skill">Javascript</div>
                 </div>
-              </Link>
-              <Link to="/work/1">
-                <p>Read more</p>
+                <span className="link-text">Read more</span>
               </Link>
             </div>
           </section>
@@ -94,9 +92,7 @@ function Worklist() {
                   <div className="skill">Sass</div>
                   <div className="skill">Javascript</div>
                 </div>
-              </Link>
-              <Link to="/work/1">
-                <p>Read more</p>
+                <span className="link-text">Read more</span>
               </Link>
             </div>
           </section>

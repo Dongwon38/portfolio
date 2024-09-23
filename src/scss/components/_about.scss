@@ -17,6 +17,9 @@
 }
 
 // ============ About Mobile ============ //
+.about-section.mobile .nav-btn .btn-pushable {
+  margin: 1rem 0;
+}
 
 // ============ About Desktop ============ //
 
@@ -28,6 +31,9 @@
   margin: 1rem 0;
   text-decoration: underline;
   cursor: pointer;
+}
+.about-toggle-button:hover {
+  color: $color-theme-secondary;
 }
 
 .about-overlay {
@@ -56,10 +62,13 @@
 
 .about-overlay .close-btn {
   position: absolute;
-  top: 16px;
-  right: 16px;
-  font-size: 1.5rem;
+  top: 24px;
+  right: 24px;
+  font-size: 24px;
   color: white;
+  background-color: $color-bg-primary;
+  padding: 0;
+  padding-left: 16px;
 }
 
 // ============ About Accordion ============ //

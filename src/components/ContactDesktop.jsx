@@ -18,7 +18,9 @@ function ContactDesktop() {
 
   return (
     <section className="contact-section desktop" id="contact-section-desktop">
-      <h2>Contact</h2>
+      <h2>
+        Contact<span className="center-line"></span>
+      </h2>
       <p>
         I always excited to hear people's stories - anything related to coding,
         design, business, or new opportunities!

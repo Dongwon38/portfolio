@@ -87,10 +87,16 @@ body {
   h2 {
     margin-top: 1rem;
     padding: 0;
+    flex-wrap: nowrap;
   }
   p {
     margin-top: 1.5rem;
     max-width: 24rem;
+  }
+}
+@media (min-width: $tablet) {
+  .hero-section {
+    height: 50vh;
   }
 }
 
@@ -110,7 +116,5 @@ body {
   border-radius: 5px;
   background-color: $color-theme-primary;
   color: white;
-
   text-align: center;
-  // box-shadow: 3px 3px 0px $color-theme-secondary;
 }
