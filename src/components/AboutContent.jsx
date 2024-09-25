@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 function AboutContent() {
   // Accordion state
-  const [activeIndex, setActiveIndex] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   function handleAccordionToggle(index) {
     setActiveIndex(activeIndex === index ? null : index);
@@ -10,36 +10,18 @@ function AboutContent() {
 
   return (
     <>
-      <h2>
-        About<span className="center-line"></span>
-      </h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae quaerat
-        expedita voluptatum eligendi asperiores totam explicabo culpa ipsam
-        maiores veritatis nam non,
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae quaerat
-        expedita voluptatum eligendi asperiores totam explicabo culpa ipsam
-        maiores veritatis nam non,
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae quaerat
-        expedita voluptatum eligendi asperiores totam explicabo culpa ipsam
-        maiores veritatis nam non,
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae quaerat
-        expedita voluptatum eligendi asperiores totam explicabo culpa ipsam
-        maiores veritatis nam non,
-      </p>
+      <div className="heading-wrapper">
+        <h2>About</h2>
+        <span className="center-line"></span>
+      </div>
+
       <div className="accordion">
         <div className="accordion-item">
           <div
             className="accordion-title"
             onClick={() => handleAccordionToggle(0)}
           >
-            <div>Title 1</div>
+            <div>Education & Skills</div>
             <div>{activeIndex === 0 ? "-" : "+"}</div>
           </div>
           {activeIndex !== 0 ? (
@@ -99,7 +81,7 @@ function AboutContent() {
             className="accordion-title"
             onClick={() => handleAccordionToggle(3)}
           >
-            <div>Title 4</div>
+            <div>Softball & Vedio supporting</div>
             <div>{activeIndex === 2 ? "-" : "+"}</div>
           </div>
 
@@ -119,7 +101,7 @@ function AboutContent() {
             className="accordion-title"
             onClick={() => handleAccordionToggle(4)}
           >
-            <div>Title 5</div>
+            <div>More about Police</div>
             <div>{activeIndex === 2 ? "-" : "+"}</div>
           </div>
 

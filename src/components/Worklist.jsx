@@ -22,20 +22,19 @@ function Worklist() {
   return (
     <section className="works-section" id="works-section">
       <div className="works-inner-container">
-        <h2>
-          Works<span className="center-line"></span>
-        </h2>
+        <div className="heading-wrapper">
+          <h2>Works</h2>
+          <span className="center-line"></span>
+        </div>
         <ul className="work-list">
           <section className="work-item">
             <img className="thumbnail" src={sample} alt="sample-bg" />
             <Link to="/work/1">
               <div className="overlay">
                 <h3 className="title">Movie-Pin</h3>
-
                 <p className="excerpt">
-                  Movie search website created using React and a REST API
+                  Movie search website created using React and REST API
                 </p>
-
                 <div className="skill-box">
                   <div className="skill">React</div>
                   <div className="skill">Sass</div>
@@ -47,11 +46,11 @@ function Worklist() {
           </section>
           <section className="work-item">
             <img className="thumbnail" src={sample} alt="sample-bg" />
-            <div className="overlay">
-              <Link to="/work/1">
-                <h3 className="title">Project 1 Title</h3>
+            <Link to="/work/1">
+              <div className="overlay">
+                <h3 className="title">Movie-Pin</h3>
                 <p className="excerpt">
-                  put an one line explanation here within 50 letters
+                  Movie search website created using React and REST API
                 </p>
                 <div className="skill-box">
                   <div className="skill">React</div>
@@ -59,16 +58,16 @@ function Worklist() {
                   <div className="skill">Javascript</div>
                 </div>
                 <span className="link-text">Read more</span>
-              </Link>
-            </div>
+              </div>
+            </Link>
           </section>
           <section className="work-item">
             <img className="thumbnail" src={sample} alt="sample-bg" />
-            <div className="overlay">
-              <Link to="/work/1">
-                <h3 className="title">Project 1 Title</h3>
+            <Link to="/work/1">
+              <div className="overlay">
+                <h3 className="title">Movie-Pin</h3>
                 <p className="excerpt">
-                  put an one line explanation here within 50 letters
+                  Movie search website created using React and REST API
                 </p>
                 <div className="skill-box">
                   <div className="skill">React</div>
@@ -76,16 +75,16 @@ function Worklist() {
                   <div className="skill">Javascript</div>
                 </div>
                 <span className="link-text">Read more</span>
-              </Link>
-            </div>
+              </div>
+            </Link>
           </section>
           <section className="work-item">
             <img className="thumbnail" src={sample} alt="sample-bg" />
-            <div className="overlay">
-              <Link to="/work/1">
-                <h3 className="title">Project 1 Title</h3>
+            <Link to="/work/1">
+              <div className="overlay">
+                <h3 className="title">Movie-Pin</h3>
                 <p className="excerpt">
-                  put an one line explanation here within 50 letters
+                  Movie search website created using React and REST API
                 </p>
                 <div className="skill-box">
                   <div className="skill">React</div>
@@ -93,8 +92,8 @@ function Worklist() {
                   <div className="skill">Javascript</div>
                 </div>
                 <span className="link-text">Read more</span>
-              </Link>
-            </div>
+              </div>
+            </Link>
           </section>
         </ul>
       </div>

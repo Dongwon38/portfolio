@@ -17,13 +17,14 @@ function ContactDesktop() {
   }
 
   return (
-    <section className="contact-section desktop" id="contact-section-desktop">
-      <h2>
-        Contact<span className="center-line"></span>
-      </h2>
+    <section className="contact-section desktop" id="contact-section">
+      <div className="heading-wrapper">
+        <h2>Contact</h2>
+        <span className="center-line"></span>
+      </div>
       <p>
         I always excited to hear people's stories - anything related to coding,
-        design, business, or new opportunities!
+        design, business, or new opportunities
       </p>
       <div className="email-btn-container">
         {showAlert && <span className="alert-box">Copied!</span>}

@@ -52,7 +52,7 @@
 }
 
 .email-btn-container button {
-  color: white;
+  color: $color-font-primary;
   text-decoration: underline;
   cursor: pointer;
   padding: 1rem 0;
@@ -67,7 +67,7 @@
   color: white;
   padding: 5px 10px;
   border-radius: 5px;
-  top: -30px;
+  top: -20px;
   opacity: 0;
   animation: fadeInOut 1.5s;
 }
@@ -88,18 +88,4 @@
     opacity: 0;
     transform: translateY(-15px);
   }
-}
-
-// test center-line
-
-.works-inner-container h2,
-.about-section h2,
-.contact-section h2 {
-  @include flex-center-center;
-}
-.center-line {
-  width: 100%;
-  margin-left: 2rem;
-  height: 1px;
-  background-color: $color-font-primary;
 }

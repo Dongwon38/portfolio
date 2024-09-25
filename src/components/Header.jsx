@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import logo from "../assets/logo-v2.3.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Header() {
   // animation on logo when scroll down
@@ -33,6 +33,29 @@ function Header() {
     });
   }
 
+  // TEst here
+  const navigate = useNavigate();
+
+  const handleContactClick = (e) => {
+    const location = e.target.textContent;
+
+    switch (location) {
+      case "Home":
+        navigate("/");
+        break;
+      case "Works":
+        navigate("/", { state: { highlight: "works" } });
+        break;
+      case "About":
+        navigate("/", { state: { highlight: "about" } });
+        break;
+      case "Contact":
+        navigate("/", { state: { highlight: "contact" } });
+        break;
+    }
+    //
+  };
+
   return (
     <header className="header" id="header">
       <div
@@ -43,6 +66,28 @@ function Header() {
           <img src={logo} alt="" />
         </Link>
       </div>
+      <ul className="desktop-nav">
+        <li className="nav-btn">
+          <p className="icon-label" onClick={(e) => handleContactClick(e)}>
+            Home
+          </p>
+        </li>
+        <li className="nav-btn">
+          <p className="icon-label" onClick={(e) => handleContactClick(e)}>
+            Works
+          </p>
+        </li>
+        <li className="nav-btn">
+          <p className="icon-label" onClick={(e) => handleContactClick(e)}>
+            About
+          </p>
+        </li>
+        <li className="nav-btn">
+          <p className="icon-label" onClick={(e) => handleContactClick(e)}>
+            Contact
+          </p>
+        </li>
+      </ul>
     </header>
   );
 }

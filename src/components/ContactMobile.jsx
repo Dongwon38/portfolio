@@ -18,12 +18,13 @@ function ContactMobile() {
 
   return (
     <section className="contact-section mobile" id="contact-section-mobile">
-      <h2>
-        Contact<span className="center-line"></span>
-      </h2>
+      <div className="heading-wrapper">
+        <h2>Contact</h2>
+        <span className="center-line"></span>
+      </div>
       <p>
         I'm always excited to hear people's stories - anything related to
-        coding, design, business, or new opportunities!
+        coding, design, business, or new opportunities
       </p>
       <div className="email-btn-container">
         {showAlert && <span className="alert-box">Copied!</span>}

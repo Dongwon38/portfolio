@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Worklist from "../components/Worklist";
 import AboutDesktop from "../components/AboutDesktop";
 import AboutMobile from "../components/AboutMobile";
@@ -17,7 +17,7 @@ function PageHome() {
     }
   };
 
-  // test
+  // Gauge Test Here ===================
   const [gauge, setGauge] = useState(0);
   const [disablehandleGauge, setDisablehandleGauge] = useState(false);
   function handleGauge() {
@@ -52,12 +52,30 @@ function PageHome() {
     console.log("yes");
   }
 
+  //  Navigation TEST HERE
+  const location = useLocation();
+
+  // Detect if 'Contact' section should be highlighted
+  useEffect(() => {
+    if (location.state) {
+      const target = location.state.highlight;
+      console.log(target);
+      const contactSection = document.querySelector(`#${target}-section`);
+      if (contactSection) {
+        contactSection.classList.add("highlighted");
+        setTimeout(() => {
+          contactSection.classList.remove("highlighted");
+        }, 100);
+      }
+    }
+  }, [location.state]);
+
   return (
     <main
       className="main-home"
       id="main-home"
-      onClick={handleGauge}
-      onTouchStart={handleGauge}
+      // onClick={handleGauge}
+      // onTouchStart={handleGauge}
     >
       <div className="left-screen" onWheel={handleWheel}>
         {/* hero-section */}

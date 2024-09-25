@@ -21,7 +21,7 @@ function ScrollProgressBar() {
 
   return (
     <div
-      className="scroll-progress-bar desk-top home"
+      className="scroll-progress-bar"
       style={{ width: `${scrollPosition}%` }}
     ></div>
   );

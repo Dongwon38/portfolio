@@ -40,6 +40,23 @@ p {
   font-weight: 400;
 }
 
+.heading-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.heading-wrapper h2 {
+  white-space: nowrap;
+}
+
+.heading-wrapper .center-line {
+  flex-grow: 1;
+  margin-left: 1rem;
+  margin-top: 3rem;
+  height: 1px;
+  background-color: $color-font-primary;
+}
+
 // ============ list ============ //
 ul,
 li {
@@ -50,7 +67,7 @@ li {
 
 a,
 a:visited {
-  color: rgb(255, 255, 255);
+  color: $color-font-primary;
   text-decoration: none;
 }
 
@@ -64,6 +81,7 @@ a:visited {
 button {
   background-color: transparent;
   border: none;
+  color: $color-font-primary;
 }
 
 .btn-pushable {

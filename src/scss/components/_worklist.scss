@@ -9,7 +9,7 @@
 
 // ============ Work-Item Layout ============ //
 .work-item {
-  height: 25rem;
+  height: 24rem;
   position: relative;
   overflow: hidden;
   margin: 1rem 0;
@@ -43,12 +43,19 @@
   }
 }
 
+@media (min-width: $desktop) {
+  .works-section .heading-wrapper .center-line {
+    margin-top: 0;
+  }
+}
+
 // ============ Work-Item detail ============ //
 
 .link-text {
   margin-top: 8px;
   margin-left: 4px;
   text-decoration: underline;
+  text-underline-offset: 2px;
   cursor: pointer;
 }
 .overlay:hover {
@@ -65,7 +72,7 @@
   .skill {
     padding: 0.2rem 0.5rem;
     background-color: #72727250;
-    color: rgb(255, 255, 255);
+    color: white;
     border-radius: 5px;
   }
 }

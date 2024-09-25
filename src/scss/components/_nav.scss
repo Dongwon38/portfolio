@@ -45,19 +45,4 @@
   .mobile-nav {
     display: none;
   }
-  .desktop-nav {
-    display: flex;
-    margin: 24px 24px;
-  }
-  .desktop-nav .nav-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $color-theme-primary;
-    padding: 12px 24px;
-  }
-  .desktop-nav .nav-btn .icon-label {
-    font-size: 1.3rem;
-    margin: 0;
-  }
 }

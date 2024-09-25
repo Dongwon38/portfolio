@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleChevronDown } from "@fortawesome/free-solid-svg-icons";
+import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
 import AboutContent from "./AboutContent";
 
 function AboutDesktop() {
@@ -13,7 +12,7 @@ function AboutDesktop() {
   }
 
   return (
-    <section className="about-section desktop" id="about-section-desktop">
+    <section className="about-section desktop" id="about-section">
       <button className="about-toggle-button" onClick={handleOverlayToggle}>
         More about me
       </button>
@@ -24,7 +23,7 @@ function AboutDesktop() {
         }
       >
         <button className="close-btn" onClick={handleOverlayToggle}>
-          <FontAwesomeIcon icon={faCircleChevronDown} />
+          <FontAwesomeIcon icon={faCircleXmark} />
         </button>
         <AboutContent />
       </div>

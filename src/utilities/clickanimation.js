@@ -1,7 +1,10 @@
 // click event, get x and y
 function click(e) {
-  for (let i = 0; i < 50; i++) {
-    createParticle(e.x, e.y);
+  const x = e.clientX || (e.touches && e.touches[0].clientX);
+  const y = e.clientY || (e.touches && e.touches[0].clientY);
+
+  for (let i = 0; i < 100; i++) {
+    createParticle(x, y);
   }
 }
 
