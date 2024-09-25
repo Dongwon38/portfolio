@@ -1,17 +1,23 @@
 @use "../base/vars" as *;
 @use "../base/mixins" as *;
 
-.header {
+.header-wrapper {
   display: flex;
   width: 100%;
-  max-width: $max-width;
-  justify-content: space-between;
+
   height: 4.5rem;
   position: fixed;
   right: 0;
   left: 0;
   top: 0;
+  margin: auto;
   z-index: $index-header;
+}
+.header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  max-width: $max-width;
 }
 
 .logo-box {
@@ -52,13 +58,13 @@
 }
 
 @media (min-width: $desktop) {
-  .header {
-    height: 3rem;
-    margin: auto;
-    padding: 0 4.5rem;
+  .header-wrapper {
     background-color: $color-bg-primary;
-    opacity: 0.9;
+    height: 3rem;
     box-shadow: 0 5px 15px 1px rgba(0, 0, 0, 0.5);
+    opacity: 0.9;
+    padding: 0 4.5rem;
+    z-index: $index-header;
   }
   .logo-box {
     margin: 8px 0;
@@ -69,9 +75,7 @@
     display: flex;
   }
   .desktop-nav .nav-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center-center;
   }
   .desktop-nav .nav-btn .icon-label {
     font-size: 1rem;

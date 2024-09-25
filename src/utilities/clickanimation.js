@@ -22,7 +22,6 @@ function createParticle(x, y) {
   // randomize particle style
   particle.style.width = `${size}px`;
   particle.style.height = `${size}px`;
-  particle.style.transform = `rotate(45deg)`;
   particle.style.background = `${
     colors[Math.floor(Math.random() * colors.length)]
   }`;
@@ -45,7 +44,7 @@ function createParticle(x, y) {
     ],
     {
       duration: 500 + Math.random() * 1000,
-      easing: "cubic-bezier(0, 0.9, 0.57, 1)",
+      easing: "cubic-bezier(0, 0.9, 0.6, 1)",
       delay: Math.random() * 200,
     }
   );

@@ -23,6 +23,11 @@
 .contact-section {
   margin-bottom: 9rem;
 }
+@media (min-width: $desktop) {
+  .contact-section {
+    margin-bottom: 0rem;
+  }
+}
 
 .contact-box {
   margin: 1rem 0;
@@ -57,6 +62,7 @@
   cursor: pointer;
   padding: 1rem 0;
 }
+.contact-box a:hover,
 .email-btn-container button:hover {
   color: $color-theme-secondary;
 }

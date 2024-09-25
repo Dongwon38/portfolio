@@ -17,9 +17,9 @@ function ContactDesktop() {
   }
 
   return (
-    <section className="contact-section desktop" id="contact-section">
+    <section className="contact-section desktop">
       <div className="heading-wrapper">
-        <h2>Contact</h2>
+        <h2 id="contact-highlight">Contact</h2>
         <span className="center-line"></span>
       </div>
       <p>
@@ -32,13 +32,16 @@ function ContactDesktop() {
       </div>
 
       <div className="contact-box">
-        <a href="mailto:dongwon.dwk@gmail.com">
+        <a href="mailto:dongwon.dwk@gmail.com" title="Send an Email">
           <FontAwesomeIcon icon={faEnvelope} />
         </a>
-        <a href="https://github.com/Dongwon38">
+        <a href="https://github.com/Dongwon38" title="View Github Repo">
           <FontAwesomeIcon icon={faSquareGithub} />
         </a>
-        <a href="https://www.linkedin.com/in/dong-won-kang/">
+        <a
+          href="https://www.linkedin.com/in/dong-won-kang/"
+          title="View Linkedin Profile"
+        >
           <FontAwesomeIcon icon={faLinkedin} />
         </a>
       </div>

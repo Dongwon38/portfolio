@@ -1,12 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
-function AboutContent() {
+function AboutContent({ isActiveOverlay }) {
   // Accordion state
   const [activeIndex, setActiveIndex] = useState(0);
 
   function handleAccordionToggle(index) {
     setActiveIndex(activeIndex === index ? null : index);
   }
+
+  // Reset Accordion state to 0 when it open
+  useEffect(() => {
+    {
+      isActiveOverlay && setActiveIndex(0);
+    }
+  }, [isActiveOverlay]);
 
   return (
     <>
@@ -21,7 +28,7 @@ function AboutContent() {
             className="accordion-title"
             onClick={() => handleAccordionToggle(0)}
           >
-            <div>Education & Skills</div>
+            <div>Background & Skills</div>
             <div>{activeIndex === 0 ? "-" : "+"}</div>
           </div>
           {activeIndex !== 0 ? (

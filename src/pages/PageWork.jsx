@@ -105,24 +105,21 @@ function PageWork() {
           <h3>See Other Works</h3>
           <div className="internal-link-list">
             <div>
-              <p className="label left">Go to the page</p>
+              <p className="label left">
+                <FontAwesomeIcon icon={faLessThan} className="font left" />
+                Go to the page
+              </p>
               <Link to="">
-                <p className="work-title">
-                  <FontAwesomeIcon icon={faLessThan} className="font left" />
-                  Movie DataBase
-                </p>
+                <p className="work-title">Movie DataBase</p>
               </Link>
             </div>
             <div>
-              <p className="label right">Go to the page</p>
+              <p className="label right">
+                Go to the page
+                <FontAwesomeIcon icon={faGreaterThan} className="font right" />
+              </p>
               <Link to="">
-                <p className="work-title">
-                  Capstone Project
-                  <FontAwesomeIcon
-                    icon={faGreaterThan}
-                    className="font right"
-                  />
-                </p>
+                <p className="work-title">Capstone Project</p>
               </Link>
             </div>
           </div>

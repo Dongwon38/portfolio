@@ -57,37 +57,39 @@ function Header() {
   };
 
   return (
-    <header className="header" id="header">
-      <div
-        className={isScrolled ? "logo-box scrolled" : "logo-box"}
-        onClick={scrollToTop}
-      >
-        <Link to="/">
-          <img src={logo} alt="" />
-        </Link>
+    <header className="header-wrapper" id="header">
+      <div className="header">
+        <div
+          className={isScrolled ? "logo-box scrolled" : "logo-box"}
+          onClick={scrollToTop}
+        >
+          <Link to="/">
+            <img src={logo} alt="" />
+          </Link>
+        </div>
+        <ul className="desktop-nav">
+          <li className="nav-btn">
+            <p className="icon-label" onClick={(e) => handleContactClick(e)}>
+              Home
+            </p>
+          </li>
+          <li className="nav-btn">
+            <p className="icon-label" onClick={(e) => handleContactClick(e)}>
+              Works
+            </p>
+          </li>
+          <li className="nav-btn">
+            <p className="icon-label" onClick={(e) => handleContactClick(e)}>
+              About
+            </p>
+          </li>
+          <li className="nav-btn">
+            <p className="icon-label" onClick={(e) => handleContactClick(e)}>
+              Contact
+            </p>
+          </li>
+        </ul>
       </div>
-      <ul className="desktop-nav">
-        <li className="nav-btn">
-          <p className="icon-label" onClick={(e) => handleContactClick(e)}>
-            Home
-          </p>
-        </li>
-        <li className="nav-btn">
-          <p className="icon-label" onClick={(e) => handleContactClick(e)}>
-            Works
-          </p>
-        </li>
-        <li className="nav-btn">
-          <p className="icon-label" onClick={(e) => handleContactClick(e)}>
-            About
-          </p>
-        </li>
-        <li className="nav-btn">
-          <p className="icon-label" onClick={(e) => handleContactClick(e)}>
-            Contact
-          </p>
-        </li>
-      </ul>
     </header>
   );
 }

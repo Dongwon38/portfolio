@@ -12,8 +12,12 @@ function AboutDesktop() {
   }
 
   return (
-    <section className="about-section desktop" id="about-section">
-      <button className="about-toggle-button" onClick={handleOverlayToggle}>
+    <section className="about-section desktop">
+      <button
+        className="about-toggle-button"
+        onClick={handleOverlayToggle}
+        id="about-highlight"
+      >
         More about me
       </button>
 
@@ -25,7 +29,7 @@ function AboutDesktop() {
         <button className="close-btn" onClick={handleOverlayToggle}>
           <FontAwesomeIcon icon={faCircleXmark} />
         </button>
-        <AboutContent />
+        <AboutContent isActiveOverlay={isActiveOverlay} />
       </div>
     </section>
   );

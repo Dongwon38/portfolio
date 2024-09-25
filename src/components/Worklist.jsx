@@ -23,7 +23,7 @@ function Worklist() {
     <section className="works-section" id="works-section">
       <div className="works-inner-container">
         <div className="heading-wrapper">
-          <h2>Works</h2>
+          <h2 id="works-highlight">Works</h2>
           <span className="center-line"></span>
         </div>
         <ul className="work-list">

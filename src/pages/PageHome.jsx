@@ -52,20 +52,19 @@ function PageHome() {
     console.log("yes");
   }
 
-  //  Navigation TEST HERE
+  //  Navigation Effect
   const location = useLocation();
 
   // Detect if 'Contact' section should be highlighted
   useEffect(() => {
     if (location.state) {
       const target = location.state.highlight;
-      console.log(target);
-      const contactSection = document.querySelector(`#${target}-section`);
+      const contactSection = document.querySelector(`#${target}-highlight`);
       if (contactSection) {
         contactSection.classList.add("highlighted");
         setTimeout(() => {
           contactSection.classList.remove("highlighted");
-        }, 100);
+        }, 600);
       }
     }
   }, [location.state]);
