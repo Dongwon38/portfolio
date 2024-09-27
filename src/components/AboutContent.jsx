@@ -28,7 +28,6 @@ function AboutContent({ isActiveOverlay }) {
       if (response.ok) {
         const data = await response.json();
         setData(data[0]);
-        console.log(data[0].acf.single_about);
         setLoadStatus(true);
       } else {
         setLoadStatus(false);

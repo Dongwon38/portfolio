@@ -5,8 +5,9 @@ import { Link } from "react-router-dom";
 
 function Worklist() {
   // get Data from WordPress
-  const restPath = restBase + "";
+  const restPath = restBase + "fwd-work";
   const [restData, setData] = useState([]);
+  const [isLoaded, setLoadStatus] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -14,7 +15,9 @@ function Worklist() {
       if (response.ok) {
         const data = await response.json();
         setData(data);
-        // console.log(data);
+        setLoadStatus(true);
+      } else {
+        setLoadStatus(false);
       }
     };
     fetchData();
@@ -28,74 +31,27 @@ function Worklist() {
           <span className="center-line"></span>
         </div>
         <ul className="work-list">
-          <section className="work-item">
-            <img className="thumbnail" src={sample} alt="sample-bg" />
-            <Link to="/work/1">
-              <div className="overlay">
-                <h3 className="title">Movie-Pin</h3>
-                <p className="excerpt">
-                  Movie search website created using React and REST API
-                </p>
-                <div className="skill-box">
-                  <div className="skill">React</div>
-                  <div className="skill">Sass</div>
-                  <div className="skill">Javascript</div>
-                </div>
-                <span className="link-text">Read more</span>
-              </div>
-            </Link>
-          </section>
-          <section className="work-item">
-            <img className="thumbnail" src={sample} alt="sample-bg" />
-            <Link to="/work/1">
-              <div className="overlay">
-                <h3 className="title">Movie-Pin</h3>
-                <p className="excerpt">
-                  Movie search website created using React and REST API
-                </p>
-                <div className="skill-box">
-                  <div className="skill">React</div>
-                  <div className="skill">Sass</div>
-                  <div className="skill">Javascript</div>
-                </div>
-                <span className="link-text">Read more</span>
-              </div>
-            </Link>
-          </section>
-          <section className="work-item">
-            <img className="thumbnail" src={sample} alt="sample-bg" />
-            <Link to="/work/1">
-              <div className="overlay">
-                <h3 className="title">Movie-Pin</h3>
-                <p className="excerpt">
-                  Movie search website created using React and REST API
-                </p>
-                <div className="skill-box">
-                  <div className="skill">React</div>
-                  <div className="skill">Sass</div>
-                  <div className="skill">Javascript</div>
-                </div>
-                <span className="link-text">Read more</span>
-              </div>
-            </Link>
-          </section>
-          <section className="work-item">
-            <img className="thumbnail" src={sample} alt="sample-bg" />
-            <Link to="/work/1">
-              <div className="overlay">
-                <h3 className="title">Movie-Pin</h3>
-                <p className="excerpt">
-                  Movie search website created using React and REST API
-                </p>
-                <div className="skill-box">
-                  <div className="skill">React</div>
-                  <div className="skill">Sass</div>
-                  <div className="skill">Javascript</div>
-                </div>
-                <span className="link-text">Read more</span>
-              </div>
-            </Link>
-          </section>
+          {isLoaded &&
+            restData.map((item, index) => (
+              <section className="work-item">
+                <img className="thumbnail" src={sample} alt="sample-bg" />
+                <Link to={`/work/${index + 1}`}>
+                  <div className="overlay">
+                    <h3 className="title">{item.acf.title}</h3>
+                    <p className="excerpt">{item.acf.excerpt}</p>
+                    <div className="skill-box">
+                      {item.acf.main_skill &&
+                        item.acf.main_skill.map((element, skillIndex) => (
+                          <div className="skill" key={skillIndex}>
+                            {element}
+                          </div>
+                        ))}
+                    </div>
+                    <span className="link-text">Read more</span>
+                  </div>
+                </Link>
+              </section>
+            ))}
         </ul>
       </div>
     </section>
