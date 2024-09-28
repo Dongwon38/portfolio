@@ -975,13 +975,13 @@ body::-webkit-scrollbar {
 
 .about-overlay .close-btn {
   position: absolute;
-  top: 30px;
-  right: 24px;
+  top: 33px;
+  right: 23px;
   font-size: 16px;
   color: #dddddd;
   background-color: #222222;
   padding: 0;
-  padding-left: 8px;
+  padding: 0 8px;
   cursor: pointer;
 }
 .about-overlay .close-btn:hover {
