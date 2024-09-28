@@ -79,19 +79,18 @@ body {
   display: flex;
   flex-direction: column;
   h2 {
-    margin-top: 1rem;
     padding: 0;
     flex-wrap: nowrap;
   }
   p {
-    margin-top: 1.5rem;
-    max-width: 24rem;
+    max-width: 30rem;
   }
 }
 
 .hero-section .nav-btn {
   text-decoration: none;
   margin: 0 auto;
+  margin-top: 6rem;
 }
 @media (min-width: $desktop) {
   .hero-section .nav-btn {

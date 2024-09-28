@@ -23,7 +23,6 @@ function PageWork() {
       if (response.ok) {
         const data = await response.json();
         setData(data[id]);
-        console.log(data[id].acf.title);
         setLoadStatus(true);
       } else {
         setLoadStatus(false);
@@ -46,14 +45,20 @@ function PageWork() {
               <h3 className="skill-box-title">Main Skill</h3>
               <div className="skill-box main">
                 {restData &&
-                  restData.acf.main_skill.map((skill) => (
-                    <div className="skill">{skill}</div>
+                  restData.acf.main_skill.map((skill, index) => (
+                    <div className="skill" key={index}>
+                      {skill}
+                    </div>
                   ))}
               </div>
               <h3 className="skill-box-title">Others</h3>
               <div className="skill-box others">
-                <div className="skill">Javascript</div>
-                <div className="skill">Git/Github</div>
+                {restData &&
+                  restData.acf.other_skill.map((skill, index) => (
+                    <div className="skill" key={index}>
+                      {skill}
+                    </div>
+                  ))}
               </div>
             </div>
           </div>
@@ -104,11 +109,19 @@ function PageWork() {
             {/*  */}
             <h3>Resources</h3>
             <div className="external-link">
-              <a href="" title="View Live Site" className="external-link-box">
+              <a
+                href={restData && restData.acf.live_site_url}
+                title="View Live Site"
+                className="external-link-box"
+              >
                 <FontAwesomeIcon icon={faGlobe} />
                 <p className="label">Live site</p>
               </a>
-              <a href="" title="View Github Repo" className="external-link-box">
+              <a
+                href={restData && restData.acf.code_url}
+                title="View Github Repo"
+                className="external-link-box"
+              >
                 <FontAwesomeIcon icon={faCode} />
                 <p className="label">Code</p>
               </a>

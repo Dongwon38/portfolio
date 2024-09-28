@@ -1,4 +1,9 @@
+# Disable directory listings and multiviews
 Options -MultiViews
+# Enable mod_rewrite
 RewriteEngine On
+# Handle requests for files that do not exist
 RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+# Redirect all requests to index.html
 RewriteRule ^ index.html [QSA,L]

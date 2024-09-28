@@ -33,7 +33,7 @@ function Worklist() {
         <ul className="work-list">
           {isLoaded &&
             restData.map((item, index) => (
-              <section className="work-item">
+              <section className="work-item" key={index}>
                 <img className="thumbnail" src={sample} alt="sample-bg" />
                 <Link to={`/work/${index + 1}`}>
                   <div className="overlay">

@@ -10,7 +10,12 @@
   margin-bottom: 3rem;
   height: 3rem;
   max-width: 24rem;
-  font-size: 1rem;
+}
+
+.rotating-text,
+.rotating-text p {
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
 .rotating-text p {
@@ -35,7 +40,6 @@
 
 .rotating-word {
   position: absolute;
-  font-weight: 600;
   animation: rotateWords 9s infinite;
   opacity: 0;
   color: $color-theme-secondary;
@@ -77,6 +81,6 @@
 
 @media (min-width: $desktop) {
   .rotating-text {
-    margin-top: 2rem;
+    margin-top: 3rem;
   }
 }

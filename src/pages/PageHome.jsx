@@ -84,10 +84,7 @@ function PageHome() {
             <h2>
               Front-end Web Developer <span className="center-line"></span>
             </h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
-              nisi consequuntur iure et officia perferendis
-            </p>
+            <p>Focused on end-user experience and pixel-perfect design</p>
 
             {/* about-section for desktop */}
             <AboutDesktop />
