@@ -836,8 +836,11 @@ body::-webkit-scrollbar {
     height: 3rem;
     box-shadow: 0 5px 15px 1px rgba(0, 0, 0, 0.5);
     opacity: 0.9;
-    padding: 0 4.5rem;
     z-index: 10;
+  }
+  .header {
+    padding: 0 4.5rem;
+    margin: 0 auto;
   }
   .logo-box {
     margin: 8px 0;
