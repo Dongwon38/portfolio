@@ -1006,7 +1006,7 @@ body::-webkit-scrollbar {
 }
 
 .accordion-content {
-  background-color: #525252;
+  background-color: #414141;
   overflow: hidden;
   max-height: 0;
   transition: max-height 0.6s ease;
@@ -1025,6 +1025,28 @@ body::-webkit-scrollbar {
   margin: 0;
   margin-bottom: 16px;
   max-width: none;
+}
+.accordion-content.open .dev-skill-box,
+.accordion-content.open .design-skill-box {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 0.5rem;
+}
+.accordion-content.open .skill {
+  padding: 0.2rem 0.5rem;
+  margin-right: 0.2rem;
+  margin-bottom: 0.2rem;
+  background-color: rgba(114, 114, 114, 0.3137254902);
+  color: white;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.accordion-content.open .skill img {
+  width: 1rem;
+  display: block;
 }
 
 .contact-section.mobile {

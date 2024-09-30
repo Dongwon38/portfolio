@@ -1,6 +1,19 @@
 import React, { useEffect, useState } from "react";
 import { restBase } from "../utilities/Utilities";
-import { h3 } from "framer-motion/client";
+import logoReact from "../assets/skill-logo/logo-react.png";
+import logoWordpress from "../assets/skill-logo/logo-wp.png";
+import logoWoo from "../assets/skill-logo/logo-woo.png";
+import logoShopi from "../assets/skill-logo/logo-shopify.png";
+import logoPhp from "../assets/skill-logo/logo-php.png";
+import logoHtml from "../assets/skill-logo/logo-html.png";
+import logoCss from "../assets/skill-logo/logo-css.png";
+import logoSass from "../assets/skill-logo/logo-sass.png";
+import logoJs from "../assets/skill-logo/logo-js.png";
+import logoGithub from "../assets/skill-logo/logo-github.png";
+import logoAi from "../assets/skill-logo/logo-ai.png";
+import logoPs from "../assets/skill-logo/logo-ps.png";
+import logoXd from "../assets/skill-logo/logo-xd.png";
+import logoFigma from "../assets/skill-logo/logo-figma.png";
 
 function AboutContent({ isActiveOverlay }) {
   // Accordion state
@@ -59,22 +72,77 @@ function AboutContent({ isActiveOverlay }) {
               {/* {isLoaded &&
                 restData.acf.background_and_skills[0].background_content} */}
               <p>
-                I am self-taught in design and video production, and studied
-                front-end web development at BCIT.
+                I am self-taught in 🎨design and 🎥filming, and studied
+                front-end web development at 🎓BCIT.
               </p>
               <p>
-                I used to be a police officer for 10 years, and I discovered my
-                brand new passion in web development while working on the police
-                intranet UX/UI improvement project, which led me to be a
-                front-end developer.
+                I used to be a 👮police officer for 10 years, and I discovered
+                my brand new 🔥passion in 💡web development while working on the
+                police intranet UX/UI improvement project, which led me to be a
+                💻front-end developer.
               </p>
               <h4>Dev Skill</h4>
-              <p>
-                React, WordPress, WooCommerce, Shopify, REST API, PHP, HTML,
-                CSS/Sass, JavaScript, GitHub
-              </p>
+              <div className="dev-skill-box">
+                <div className="skill">
+                  <img src={logoReact} />
+                  React
+                </div>
+                <div className="skill">
+                  <img src={logoWordpress} />
+                  WordPress
+                </div>
+                <div className="skill">
+                  <img src={logoWoo} />
+                  WooCommerce
+                </div>
+                <div className="skill">
+                  <img src={logoPhp} />
+                  PHP
+                </div>
+                <div className="skill">
+                  <img src={logoShopi} />
+                  Shopify
+                </div>
+                <div className="skill">
+                  <img src={logoHtml} />
+                  HTML
+                </div>
+                <div className="skill">
+                  <img src={logoCss} />
+                  CSS
+                </div>
+                <div className="skill">
+                  <img src={logoSass} />
+                  Sass
+                </div>
+                <div className="skill">
+                  <img src={logoJs} />
+                  JavaScript
+                </div>
+                <div className="skill">
+                  <img src={logoGithub} />
+                  GitHub
+                </div>
+              </div>
               <h4>Design Skill</h4>
-              <p>Adobe Illustrator, Adobe Photoshop, Adobe XD, Figma</p>
+              <div className="design-skill-box">
+                <div className="skill">
+                  <img src={logoAi} />
+                  Adobe Illustrator
+                </div>
+                <div className="skill">
+                  <img src={logoPs} />
+                  Adobe Photoshop
+                </div>
+                <div className="skill">
+                  <img src={logoXd} />
+                  Adobe XD
+                </div>
+                <div className="skill">
+                  <img src={logoFigma} />
+                  Figma
+                </div>
+              </div>
             </div>
           )}
         </div>
