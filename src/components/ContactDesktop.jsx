@@ -23,8 +23,8 @@ function ContactDesktop() {
         <span className="center-line"></span>
       </div>
       <p>
-        I always excited to hear people's stories - anything related to coding,
-        design, business, or new opportunities
+        I'm always excited to hear people's stories - anything related to
+        coding, design, business, or new opportunities
       </p>
       <div className="email-btn-container">
         {showAlert && <span className="alert-box">Copied!</span>}
