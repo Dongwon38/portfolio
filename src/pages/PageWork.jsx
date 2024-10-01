@@ -106,7 +106,6 @@ function PageWork() {
                 that icons and text were clear and user-friendly.
               </p>
             </div>
-            {/*  */}
             <h3>Resources</h3>
             <div className="external-link">
               <a
@@ -128,7 +127,7 @@ function PageWork() {
             </div>
           </div>
           <div className="bottom-section">
-            <div className="internal-link">
+            {/* <div className="internal-link">
               <h3>See Other Works</h3>
               <div className="internal-link-list">
                 <div>
@@ -153,7 +152,7 @@ function PageWork() {
                   </Link>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </main>
       )}

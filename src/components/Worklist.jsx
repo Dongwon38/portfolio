@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
 import sample from "../assets/sample.jpg";
+import moviePin1 from "../assets/img/movie-pin-1.png";
+import portfolio1 from "../assets/img/portfolio1.png";
+import matchingGame1 from "../assets/img/matching-game1.png";
 import { restBase } from "../utilities/Utilities";
 import { Link } from "react-router-dom";
 
@@ -31,27 +34,60 @@ function Worklist() {
           <span className="center-line"></span>
         </div>
         <ul className="work-list">
-          {isLoaded &&
-            restData.map((item, index) => (
-              <section className="work-item" key={index}>
-                <img className="thumbnail" src={sample} alt="sample-bg" />
-                <Link to={`/work/${index + 1}`}>
-                  <div className="overlay">
-                    <h3 className="title">{item.acf.title}</h3>
-                    <p className="excerpt">{item.acf.excerpt}</p>
-                    <div className="skill-box">
-                      {item.acf.main_skill &&
-                        item.acf.main_skill.map((element, skillIndex) => (
-                          <div className="skill" key={skillIndex}>
-                            {element}
-                          </div>
-                        ))}
-                    </div>
-                    <span className="link-text">Read more</span>
-                  </div>
-                </Link>
-              </section>
-            ))}
+          <section className="work-item">
+            <img className="thumbnail" src={moviePin1} alt="sample-bg" />
+            <Link to={`/work/1`}>
+              <div className="overlay">
+                <h3 className="title">Movie-Pin</h3>
+                <p className="excerpt">
+                  Movie search website using TMDB API offering text searching,
+                  saving a list
+                </p>
+                <div className="skill-box">
+                  <div className="skill">React</div>
+                  <div className="skill">CSS/Sass</div>
+                  <div className="skill">APIs</div>
+                </div>
+                <span className="link-text">Read more</span>
+              </div>
+            </Link>
+          </section>
+          <section className="work-item">
+            <img className="thumbnail" src={portfolio1} alt="sample-bg" />
+            <Link to={`/work/2`}>
+              <div className="overlay">
+                <h3 className="title">Portfolio</h3>
+                <p className="excerpt">
+                  Portfolio website to showcase projects and provide a way to
+                  connect
+                </p>
+                <div className="skill-box">
+                  <div className="skill">WordPress</div>
+                  <div className="skill">React</div>
+                  <div className="skill">CSS/Sass</div>
+                  <div className="skill">APIs</div>
+                </div>
+                <span className="link-text">Read more</span>
+              </div>
+            </Link>
+          </section>
+          <section className="work-item">
+            <img className="thumbnail" src={matchingGame1} alt="sample-bg" />
+            <Link to={`/work/3`}>
+              <div className="overlay">
+                <h3 className="title">Matching Game</h3>
+                <p className="excerpt">
+                  Turn-based card matching game play against the computer
+                </p>
+                <div className="skill-box">
+                  <div className="skill">JavaScript</div>
+                  <div className="skill">HTML</div>
+                  <div className="skill">CSS</div>
+                </div>
+                <span className="link-text">Read more</span>
+              </div>
+            </Link>
+          </section>
         </ul>
       </div>
     </section>
@@ -59,3 +95,25 @@ function Worklist() {
 }
 
 export default Worklist;
+
+// {isLoaded &&
+//   restData.map((item, index) => (
+//     <section className="work-item" key={index}>
+//       <img className="thumbnail" src={sample} alt="sample-bg" />
+//       <Link to={`/work/${index + 1}`}>
+//         <div className="overlay">
+//           <h3 className="title">{item.acf.title}</h3>
+//           <p className="excerpt">{item.acf.excerpt}</p>
+//           <div className="skill-box">
+//             {item.acf.main_skill &&
+//               item.acf.main_skill.map((element, skillIndex) => (
+//                 <div className="skill" key={skillIndex}>
+//                   {element}
+//                 </div>
+//               ))}
+//           </div>
+//           <span className="link-text">Read more</span>
+//         </div>
+//       </Link>
+//     </section>
+//   ))}

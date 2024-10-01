@@ -22,8 +22,9 @@
     border-radius: 5px;
   }
   .thumbnail {
-    object-position: center;
+    object-position: top;
     object-fit: cover;
+    filter: brightness(0.8);
   }
   .overlay {
     position: absolute;
@@ -36,8 +37,8 @@
     color: $color-font-primary;
     background: linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 0) 30%,
-      rgba(0, 0, 0, 0.9) 100%
+      rgba(0, 0, 0, 0) 20%,
+      rgba(0, 0, 0, 0.6) 90%
     );
     cursor: default;
   }
