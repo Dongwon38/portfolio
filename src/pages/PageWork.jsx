@@ -13,7 +13,8 @@ import { restBase } from "../utilities/Utilities";
 function PageWork() {
   const { id } = useParams();
   // get Data from WordPress
-  const restPath = restBase + "fwd-work";
+  const order = "?order=asc";
+  const restPath = restBase + "fwd-work" + order;
   const [restData, setData] = useState([]);
   const [isLoaded, setLoadStatus] = useState(false);
 
@@ -22,8 +23,9 @@ function PageWork() {
       const response = await fetch(restPath);
       if (response.ok) {
         const data = await response.json();
-        setData(data[id]);
+        setData(data[id - 1]);
         setLoadStatus(true);
+        console.log(data[id - 1].acf.learned[0]);
       } else {
         setLoadStatus(false);
       }

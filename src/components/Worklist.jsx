@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import sample from "../assets/sample.jpg";
 import moviePin1 from "../assets/img/movie-pin-1.png";
 import portfolio1 from "../assets/img/portfolio1.png";
 import matchingGame1 from "../assets/img/matching-game1.png";
+import travelAgency1 from "../assets/img/travel-agency.jpg";
+import comingSoon from "../assets/img/coming-soon.png";
 import { restBase } from "../utilities/Utilities";
 import { Link } from "react-router-dom";
 
@@ -62,7 +63,7 @@ function Worklist() {
                   connect
                 </p>
                 <div className="skill-box">
-                  <div className="skill">WordPress</div>
+                  <div className="skill">WordPress/Headless CMS</div>
                   <div className="skill">React</div>
                   <div className="skill">CSS/Sass</div>
                   <div className="skill">APIs</div>
@@ -83,6 +84,28 @@ function Worklist() {
                   <div className="skill">JavaScript</div>
                   <div className="skill">HTML</div>
                   <div className="skill">CSS</div>
+                </div>
+                <span className="link-text">Read more</span>
+              </div>
+            </Link>
+          </section>
+          <section className="work-item">
+            <img className="thumbnail" src={travelAgency1} alt="sample-bg" />
+            <Link to="/">
+              <div className="overlay-coming-soon">
+                <img src={comingSoon} />
+              </div>
+              <div className="overlay">
+                <h3 className="title">Travel Agency</h3>
+                <p className="excerpt">
+                  Providing booking, reveiwing and rating for activities,
+                  accommodations and tour guides
+                </p>
+                <div className="skill-box">
+                  <div className="skill">WordPress</div>
+                  <div className="skill">WooCommerce</div>
+                  <div className="skill">React</div>
+                  <div className="skill">APIs</div>
                 </div>
                 <span className="link-text">Read more</span>
               </div>
