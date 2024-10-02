@@ -18,7 +18,6 @@ body {
   justify-content: center;
   padding: 3rem 1.5rem;
   margin: 0 auto;
-  max-width: $max-width;
 }
 
 .works {
@@ -30,13 +29,20 @@ body {
   margin-top: 4.5rem;
 }
 
+@media (min-width: $mobile-wide) {
+  .main-home {
+    max-width: 480px;
+  }
+}
+
 @media (min-width: $desktop) {
   .main-home {
     display: flex;
     flex-direction: row;
     height: 100vh;
     overflow: hidden;
-    padding: 0 4.5rem;
+    padding: 0 8rem;
+    max-width: $max-width;
   }
   .left-screen {
     display: flex;
@@ -48,12 +54,13 @@ body {
     width: 45%;
     margin: 0;
     padding-bottom: 3rem;
+    padding-right: 6rem;
   }
   .right-screen {
     width: 55%;
     height: 100vh;
     overflow-y: auto;
-    padding-left: 3rem;
+    padding-left: 6rem;
   }
   .hero-section {
     margin-top: 3rem;

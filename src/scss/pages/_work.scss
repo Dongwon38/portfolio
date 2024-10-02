@@ -18,13 +18,19 @@
   padding-bottom: 3rem;
 }
 
+@media (min-width: $mobile-wide) {
+  .main-work {
+    max-width: 480px;
+  }
+}
+
 @media (min-width: $desktop) {
   .main-work {
     display: grid;
     grid-template-columns: 1fr 1fr;
-
-    padding: 0 4.5rem;
+    padding: 0 8rem;
     column-gap: 3rem;
+    max-width: $max-width;
   }
   .left-section {
   }
@@ -53,8 +59,7 @@
 }
 
 .main-work .img-container {
-  max-width: 36rem;
-  margin: 1rem auto;
+  max-width: 40rem;
 }
 
 .skill-box {

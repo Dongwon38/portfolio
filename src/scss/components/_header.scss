@@ -4,6 +4,7 @@
 .header-wrapper {
   display: flex;
   width: 100%;
+  max-width: 480px;
   height: 4.5rem;
   position: fixed;
   right: 0;
@@ -16,8 +17,6 @@
   display: flex;
   width: 100%;
   justify-content: space-between;
-
-  max-width: $max-width;
 }
 
 .logo-box {
@@ -64,10 +63,12 @@
     box-shadow: 0 5px 15px 1px rgba(0, 0, 0, 0.5);
     opacity: 0.9;
     z-index: $index-header;
+    max-width: none;
   }
   .header {
-    padding: 0 4.5rem;
     margin: 0 auto;
+    padding: 0 8rem; // related to body
+    max-width: $max-width;
   }
   .logo-box {
     margin: 8px 0;
