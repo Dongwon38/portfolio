@@ -159,9 +159,14 @@ function AboutContent({ isActiveOverlay }) {
           ) : (
             <div className="accordion-content open">
               <p>
-                I spend physical activity and new experiences. Walking and
-                hiking keep me more productive and active. This year I ran a 10k
-                for the first time and joined a recreational softball league.
+                I enjoy being active and spending time in nature. I took part in
+                a softball league which was a lot of fun. I feel there's
+                something special about the energy that comes with team sports.
+              </p>
+              <p>
+                On the flip side, I also love playing video games. Exploring
+                different worlds and scenarios is a great way to spark my
+                imagination, offering a creative escape into new possibilities.
               </p>
             </div>
           )}
@@ -171,10 +176,35 @@ function AboutContent({ isActiveOverlay }) {
             className="accordion-title"
             onClick={() => handleAccordionToggle(2)}
           >
-            <div>More about Police Officer</div>
+            <div>Softball, Running, Hiking</div>
             <div>{activeIndex === 2 ? "-" : "+"}</div>
           </div>
           {activeIndex !== 2 ? (
+            <div className="accordion-content"></div>
+          ) : (
+            <div className="accordion-content open">
+              <p>
+                I enjoy being active and spending time in nature. I took part in
+                a softball league which was a lot of fun. I feel there's
+                something special about the energy that comes with team sports.
+              </p>
+              <p>
+                On the flip side, I also love playing video games. Exploring
+                different worlds and scenarios is a great way to spark my
+                imagination, offering a creative escape into new possibilities.
+              </p>
+            </div>
+          )}
+        </div>
+        <div className="accordion-item">
+          <div
+            className="accordion-title"
+            onClick={() => handleAccordionToggle(3)}
+          >
+            <div>More about Police Officer</div>
+            <div>{activeIndex === 3 ? "-" : "+"}</div>
+          </div>
+          {activeIndex !== 3 ? (
             <div className="accordion-content"></div>
           ) : (
             <div className="accordion-content open">
