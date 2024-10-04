@@ -151,23 +151,14 @@ function AboutContent({ isActiveOverlay }) {
             className="accordion-title"
             onClick={() => handleAccordionToggle(1)}
           >
-            <div>Softball, Running, Hiking</div>
+            <div>Myers Briggs Type</div>
             <div>{activeIndex === 1 ? "-" : "+"}</div>
           </div>
           {activeIndex !== 1 ? (
             <div className="accordion-content"></div>
           ) : (
             <div className="accordion-content open">
-              <p>
-                I enjoy being active and spending time in nature. I took part in
-                a softball league which was a lot of fun. I feel there's
-                something special about the energy that comes with team sports.
-              </p>
-              <p>
-                On the flip side, I also love playing video games. Exploring
-                different worlds and scenarios is a great way to spark my
-                imagination, offering a creative escape into new possibilities.
-              </p>
+              <p>INFP</p>
             </div>
           )}
         </div>
