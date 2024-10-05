@@ -1,6 +1,13 @@
 import React, { useEffect, useState } from "react";
 import logo from "../assets/logo-v2.3.png";
 import { Link, useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faHouse,
+  faFolder,
+  faUser,
+  faComment,
+} from "@fortawesome/free-solid-svg-icons";
 
 function Header() {
   // animation on logo when scroll down
@@ -78,6 +85,9 @@ function Header() {
               Works
             </p>
           </li>
+          <Link to="/#works-section" className="nav-btn">
+            <p className="icon-label">Works</p>
+          </Link>
           <li className="nav-btn">
             <p className="icon-label" onClick={(e) => handleContactClick(e)}>
               About

@@ -23,7 +23,7 @@ function ScrollToHash() {
 
 function AppRouter() {
   return (
-    <BrowserRouter basename={`/portfolio`}>
+    <BrowserRouter basename={`/`}>
       <ScrollProgressBar />
       <ScrollToHash />
       <Header />

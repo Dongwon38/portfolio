@@ -1,13 +1,8 @@
-======= section about =======
-Trilingual in French, English and Spanish with a background in hospitality and education. I am a graduate of the Front-End Development program at BCIT.
+1 navigation bar -> make it more distinctive
+-About -> popping up the about section and close it
+-Works-> navigate or scroll to works
 
-Leveraging business and marketing expertise to craft impactful branded websites and design solutions, helping aspiring startups and SMEs establish a strong foothold in Kuwait's dynamic market.
+2 infinite scroll for works list + interval automatic scrolling
 
-A full-stack developer based in Vancouver, Canada.
-
-I specialize in creating things for the web and how people interact with technology and interfaces. My goal is to enhance the usability experience of every project I work on.
-
-Specializing in simplicity
-and functionality
-
-Jihye [Jee-hae], meaning ‘Wisdom’ in Korean, reflects the essence of my approach to design. With a rich blend of work experience and educational background, I craft thoughtful and insightful design solutions that address complex challenges.
+3 mouse icon change when click
+to confetti icon
