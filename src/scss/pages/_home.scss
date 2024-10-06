@@ -54,13 +54,13 @@ body {
     width: 45%;
     margin: 0;
     padding-bottom: 3rem;
-    padding-right: 6rem;
+    padding-right: 3rem;
   }
   .right-screen {
     width: 55%;
     height: 100vh;
     overflow-y: auto;
-    padding-left: 6rem;
+    padding-left: 3rem;
   }
   .hero-section {
     margin-top: 3rem;
@@ -79,6 +79,15 @@ body {
   }
 }
 
+@media (min-width: $desktop-wide) {
+  .left-screen {
+    padding-right: 6rem;
+  }
+  .right-screen {
+    padding-left: 6rem;
+  }
+}
+
 // ============ Hero Section ============ //
 
 .hero-section {
@@ -88,9 +97,6 @@ body {
   h2 {
     padding: 0;
     flex-wrap: nowrap;
-  }
-  p {
-    max-width: 30rem;
   }
 }
 

@@ -576,13 +576,13 @@ body {
     width: 45%;
     margin: 0;
     padding-bottom: 3rem;
-    padding-right: 6rem;
+    padding-right: 3rem;
   }
   .right-screen {
     width: 55%;
     height: 100vh;
     overflow-y: auto;
-    padding-left: 6rem;
+    padding-left: 3rem;
   }
   .hero-section {
     margin-top: 3rem;
@@ -600,6 +600,14 @@ body {
     padding: 0;
   }
 }
+@media (min-width: 85.375rem) {
+  .left-screen {
+    padding-right: 6rem;
+  }
+  .right-screen {
+    padding-left: 6rem;
+  }
+}
 .hero-section {
   height: calc(100vh - 4rem - 4.5rem);
   display: flex;
@@ -608,9 +616,6 @@ body {
 .hero-section h2 {
   padding: 0;
   flex-wrap: nowrap;
-}
-.hero-section p {
-  max-width: 30rem;
 }
 
 .hero-section .nav-btn {
@@ -1102,10 +1107,6 @@ body::-webkit-scrollbar {
 
 .contact-box a:nth-child(1) {
   padding-left: 0;
-}
-
-.contact-section.desktop p {
-  max-width: 30rem;
 }
 
 .email-btn-container {
