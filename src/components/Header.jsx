@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import logo from "../assets/logo-v2.3.png";
 import { Link, useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { GlobalContext } from "../context/GlobalState";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHouse,
@@ -10,6 +12,13 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 function Header() {
+  // test
+  const { aboutToggled, toggleAbout } = useContext(GlobalContext);
+
+  const handleAboutToggle = () => {
+    toggleAbout();
+  };
+
   // animation on logo when scroll down
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -45,15 +54,18 @@ function Header() {
 
   const handleContactClick = (e) => {
     const location = e.target.textContent;
-
+    if (location != "About" && aboutToggled == true) {
+      toggleAbout();
+    }
     switch (location) {
       case "Home":
         navigate("/");
         break;
       case "Works":
-        navigate("/", { state: { highlight: "works" } });
+        navigate("/#works-section", { state: { highlight: "works" } });
         break;
       case "About":
+        handleAboutToggle();
         navigate("/", { state: { highlight: "about" } });
         break;
       case "Contact":
@@ -85,9 +97,6 @@ function Header() {
               Works
             </p>
           </li>
-          <Link to="/#works-section" className="nav-btn">
-            <p className="icon-label">Works</p>
-          </Link>
           <li className="nav-btn">
             <p className="icon-label" onClick={(e) => handleContactClick(e)}>
               About

@@ -25,7 +25,6 @@ function PageWork() {
         const data = await response.json();
         setData(data[id - 1]);
         setLoadStatus(true);
-        console.log(data[id - 1].acf.learned[0]);
       } else {
         setLoadStatus(false);
       }

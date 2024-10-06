@@ -1,14 +1,14 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
 import AboutContent from "./AboutContent";
+import { GlobalContext } from "../context/GlobalState";
 
 function AboutDesktop() {
-  // Overlay state
-  const [isActiveOverlay, setIsActiveOverlay] = useState(false);
+  const { aboutToggled, toggleAbout } = useContext(GlobalContext);
 
   function handleOverlayToggle() {
-    setIsActiveOverlay(!isActiveOverlay);
+    toggleAbout();
   }
 
   return (
@@ -22,14 +22,12 @@ function AboutDesktop() {
       </button>
 
       <div
-        className={
-          isActiveOverlay ? "about-overlay activated" : "about-overlay"
-        }
+        className={aboutToggled ? "about-overlay activated" : "about-overlay"}
       >
         <button className="close-btn" onClick={handleOverlayToggle}>
           <FontAwesomeIcon icon={faCircleXmark} />
         </button>
-        <AboutContent isActiveOverlay={isActiveOverlay} />
+        <AboutContent />
       </div>
     </section>
   );

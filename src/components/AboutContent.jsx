@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { restBase } from "../utilities/Utilities";
 import logoReact from "../assets/skill-logo/logo-react.png";
 import logoWordpress from "../assets/skill-logo/logo-wp.png";
@@ -14,8 +14,11 @@ import logoAi from "../assets/skill-logo/logo-ai.png";
 import logoPs from "../assets/skill-logo/logo-ps.png";
 import logoXd from "../assets/skill-logo/logo-xd.png";
 import logoFigma from "../assets/skill-logo/logo-figma.png";
+import { GlobalContext } from "../context/GlobalState";
 
 function AboutContent({ isActiveOverlay }) {
+  const { aboutToggled, toggleAbout } = useContext(GlobalContext);
+
   // Accordion state
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -26,9 +29,9 @@ function AboutContent({ isActiveOverlay }) {
   // Reset Accordion state to 0 when it open
   useEffect(() => {
     {
-      isActiveOverlay && setActiveIndex(0);
+      aboutToggled && setActiveIndex(0);
     }
-  }, [isActiveOverlay]);
+  }, [aboutToggled]);
 
   // get Data from WordPress
   const restPath = restBase + "fwd-about";

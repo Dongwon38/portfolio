@@ -87,10 +87,7 @@ function PageHome() {
             <p>Focused on end-user experience and pixel-perfect design</p>
 
             {/* about-section for desktop */}
-            <AboutDesktop
-              isAboutToggled={isAboutToggled}
-              setIsAboutToggled={setIsAboutToggled}
-            />
+            <AboutDesktop />
             <RotatingText />
           </div>
           <Link to="/#works-section" className="nav-btn">

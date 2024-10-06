@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Nav from "./components/Nav";
 import PageWork from "./pages/PageWork";
 import ScrollProgressBar from "./components/ScrollProgressbar";
+import { GlobalProvider } from "./context/GlobalState";
 
 function ScrollToHash() {
   const location = useLocation();
@@ -24,14 +25,16 @@ function ScrollToHash() {
 function AppRouter() {
   return (
     <BrowserRouter basename={`/`}>
-      <ScrollProgressBar />
-      <ScrollToHash />
-      <Header />
-      <Nav />
-      <Routes>
-        <Route path="/" exact element={<PageHome />}></Route>
-        <Route path="/work/:id" element={<PageWork />}></Route>
-      </Routes>
+      <GlobalProvider>
+        <ScrollProgressBar />
+        <ScrollToHash />
+        <Header />
+        <Nav />
+        <Routes>
+          <Route path="/" exact element={<PageHome />}></Route>
+          <Route path="/work/:id" element={<PageWork />}></Route>
+        </Routes>
+      </GlobalProvider>
     </BrowserRouter>
   );
 }
