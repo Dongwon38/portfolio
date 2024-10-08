@@ -12,7 +12,7 @@ function ContactDesktop() {
       setShowAlert(true);
       setTimeout(() => {
         setShowAlert(false);
-      }, 1500);
+      }, 1000);
     }
   }
 
