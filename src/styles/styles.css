@@ -872,6 +872,7 @@ body::-webkit-scrollbar {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
   }
   .desktop-nav .nav-btn .icon-label {
     font-size: 1rem;
