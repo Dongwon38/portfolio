@@ -8,4 +8,4 @@ function testFunction() {
 }
 
 const domContainer = document.querySelector("#root");
-ReactDOM.render(React.createElement(testFunction), domContainer);
+// ReactDOM.render(React.createElement(testFunction), domContainer);
