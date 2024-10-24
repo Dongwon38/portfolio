@@ -1,3 +1,12 @@
+1 컨택트
+- 오른쪽 플로팅으로 바꾸기
+- 네비게이션에서 누르면 확장되는 형식이거나, 네비게이션에서 지우기
+
+2 어바웃
+- UX 개선방안
+
+
+
 1 navigation bar -> make it more distinctive
 -About -> popping up the about section and close it
 -Works-> navigate or scroll to works
