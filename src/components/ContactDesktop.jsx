@@ -17,7 +17,7 @@ function ContactDesktop() {
   }
 
   return (
-    <section className="contact-section desktop" id="contact-highlight">
+    <section className="contact-section desktop">
       <div className="heading-wrapper">
         <h2>Contact</h2>
         <span className="center-line"></span>

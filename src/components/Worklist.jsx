@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 function Worklist() {
   // get Data from WordPress
-  const restPath = restBase + "fwd-work?order=asc";
+  const restPath = restBase + "fwd-work";
   const [restData, setData] = useState([]);
   const [isLoaded, setLoadStatus] = useState(false);
   const [thumbnails, setThumbnails] = useState({});

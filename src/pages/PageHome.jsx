@@ -100,7 +100,7 @@ function PageHome() {
         </section>
 
         {/* contact-section for desktop */}
-        <ContactDesktop />
+        {/* <ContactDesktop /> */}
       </div>
       <div className="right-screen" ref={rightScrollRef}>
         <Worklist />

@@ -3,11 +3,11 @@
 
 // ============ Page Layout ============ //
 .main-work {
-  margin: 4.5rem auto 0 auto; // header height
+  margin: 0 auto; // header height
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 3rem 1.5rem;
+  padding: 4.5rem 1.5rem;
   max-width: $max-width;
 }
 .left-section {
@@ -28,7 +28,7 @@
   .main-work {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 0 8rem;
+    padding: 4.5rem 8rem;
     column-gap: 3rem;
     max-width: $max-width;
   }

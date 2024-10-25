@@ -653,11 +653,11 @@ body {
 }
 
 .main-work {
-  margin: 4.5rem auto 0 auto;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 3rem 1.5rem;
+  padding: 4.5rem 1.5rem;
   max-width: 100rem;
 }
 
@@ -674,7 +674,7 @@ body {
   .main-work {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 0 8rem;
+    padding: 4.5rem 8rem;
     column-gap: 3rem;
     max-width: 100rem;
   }
@@ -1155,6 +1155,29 @@ body::-webkit-scrollbar {
     transform: translateY(-15px);
   }
 }
+.contact-floating {
+  position: absolute;
+  margin-top: 48px;
+  right: 0;
+}
+
+.contact-floating .contact-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-floating .contact-box a {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 16px 4px 0;
+  font-size: 24px;
+}
+.contact-floating .contact-box a p {
+  margin: 0;
+}
+
 .rotating-text {
   position: relative;
   display: flex;

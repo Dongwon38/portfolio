@@ -11,8 +11,7 @@ import { restBase } from "../utilities/Utilities";
 
 function PageWork() {
   const { id } = useParams();
-  const order = "?order=asc";
-  const restPath = restBase + "fwd-work" + order;
+  const restPath = restBase + "fwd-work";
   const [restData, setData] = useState({});
   const [isLoaded, setLoadStatus] = useState(false);
   const [images, setImages] = useState({});

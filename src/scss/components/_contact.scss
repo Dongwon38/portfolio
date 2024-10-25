@@ -90,3 +90,27 @@
     transform: translateY(-15px);
   }
 }
+
+// ============ Contact TEST AREA ============ //
+.contact-floating {
+  position: absolute;
+  margin-top: 48px;
+  right: 0;
+}
+
+.contact-floating .contact-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-floating .contact-box a {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 16px 4px 0;
+  font-size: 24px;
+  p {
+    margin: 0;
+  }
+}
