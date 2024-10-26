@@ -13,21 +13,19 @@ function AboutDesktop() {
 
   return (
     <section className="about-section desktop">
-      <button
-        className="about-toggle-button"
-        onClick={handleOverlayToggle}
-        id="about-highlight"
-      >
-        More about me
-      </button>
-
       <div
         className={aboutToggled ? "about-overlay activated" : "about-overlay"}
       >
-        <button className="close-btn" onClick={handleOverlayToggle}>
-          <FontAwesomeIcon icon={faCircleXmark} />
-        </button>
-        <AboutContent />
+        <div
+          className={
+            aboutToggled ? "about-overlay-box activated" : "about-overlay-box"
+          }
+        >
+          <button className="close-btn" onClick={handleOverlayToggle}>
+            <FontAwesomeIcon icon={faCircleXmark} />
+          </button>
+          <AboutContent />
+        </div>
       </div>
     </section>
   );

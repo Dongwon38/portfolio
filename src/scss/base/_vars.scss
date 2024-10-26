@@ -28,12 +28,13 @@ $desktop: 64em; // 1024px
 $desktop-wide: 85.375rem; // 1366px
 
 // z-index
-$index-overlay: 2;
+$index-work-item-overlay: 2;
+$index-progressbar: 9;
 $index-header: 10;
 $index-nav: 10;
-$index-about-overlay: 20;
-$index-progressbar: 9;
-$index-btn-live-chat: 999;
+$index-about-bg-overlay: 20;
+$index-top-content: 100;
+$index-about-box-overlay: 101;
 
 // vars
 $max-width: 100rem;

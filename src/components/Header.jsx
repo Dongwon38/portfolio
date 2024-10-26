@@ -3,13 +3,6 @@ import logo from "../assets/logo-v2.3.png";
 import { Link, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faHouse,
-  faFolder,
-  faUser,
-  faComment,
-} from "@fortawesome/free-solid-svg-icons";
 
 function Header() {
   // test
@@ -66,13 +59,12 @@ function Header() {
         break;
       case "About":
         handleAboutToggle();
-        navigate("/", { state: { highlight: "about" } });
+        // navigate("/", { state: { highlight: "about" } });
         break;
-      case "Contact":
-        navigate("/", { state: { highlight: "contact" } });
-        break;
+      // case "Contact":
+      //   navigate("/", { state: { highlight: "contact" } });
+      //   break;
     }
-    //
   };
 
   return (
@@ -100,11 +92,6 @@ function Header() {
           <li className="nav-btn">
             <p className="icon-label" onClick={(e) => handleContactClick(e)}>
               About
-            </p>
-          </li>
-          <li className="nav-btn">
-            <p className="icon-label" onClick={(e) => handleContactClick(e)}>
-              Contact
             </p>
           </li>
         </ul>

@@ -42,7 +42,7 @@
   padding-left: 0;
 }
 
-// ============ Contact Desktop ============ //
+// ============ Contact Mobile ============ //
 
 // ============ Email Copy Function ============ //
 
@@ -53,10 +53,13 @@
 
 .email-btn-container button {
   color: $color-font-primary;
-  text-decoration: underline;
   cursor: pointer;
-  padding: 1rem 0;
+  padding: 16px 0;
 }
+.email-btn-container.desktop button {
+  padding: 0 8px;
+}
+
 .contact-box a:hover,
 .email-btn-container button:hover {
   color: $color-theme-secondary;
@@ -71,6 +74,10 @@
   top: -20px;
   opacity: 0;
   animation: fadeInOut 1.5s;
+}
+.alert-box.desktop {
+  top: 5px;
+  left: -65px;
 }
 
 @keyframes fadeInOut {
@@ -91,11 +98,16 @@
   }
 }
 
-// ============ Contact TEST AREA ============ //
+// ============ Contact floating - desktop ============ //
 .contact-floating {
-  position: absolute;
+  display: none;
+  @media (min-width: $desktop) {
+    display: block;
+  }
+  position: fixed;
   margin-top: 48px;
-  right: 0;
+  right: 8px;
+  z-index: $index-top-content;
 }
 
 .contact-floating .contact-box {
@@ -110,7 +122,4 @@
   gap: 8px;
   padding: 16px 16px 4px 0;
   font-size: 24px;
-  p {
-    margin: 0;
-  }
 }
