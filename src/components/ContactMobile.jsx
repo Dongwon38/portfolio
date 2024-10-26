@@ -23,9 +23,11 @@ function ContactMobile() {
         <span className="center-line"></span>
       </div>
       <p>
-        I'm always excited to hear people's stories - anything related to
-        coding, design, business, or new opportunities
+        Feel free to contact me, I'm easy 😉
+        <br />
+        (but I'm serious about my work.)
       </p>
+      <p>dongwon.dwk@gmail.com</p>
       <div className="email-btn-container">
         {showAlert && <span className="alert-box">Copied!</span>}
         <button onClick={copyEmail}>Copy Email</button>

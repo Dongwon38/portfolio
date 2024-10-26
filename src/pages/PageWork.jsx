@@ -7,6 +7,7 @@ import {
   faGreaterThan,
   faLessThan,
 } from "@fortawesome/free-solid-svg-icons";
+import AboutDesktop from "../components/AboutDesktop";
 import { restBase } from "../utilities/Utilities";
 
 function PageWork() {
@@ -106,7 +107,6 @@ function PageWork() {
               </div>
             </div>
           </section>
-
           <section className="right-section">
             <div className="heading-wrapper">
               <h2>What I Learned</h2>
@@ -179,6 +179,8 @@ function PageWork() {
               </div>
             </div>
           </section>
+          {/* about-section for desktop */}
+          <AboutDesktop />
         </main>
       )}
     </>

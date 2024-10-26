@@ -66,7 +66,9 @@ function AboutContent({ isActiveOverlay }) {
             onClick={() => handleAccordionToggle(0)}
           >
             <div>Background & Skills</div>
-            <div>{activeIndex === 0 ? "-" : "+"}</div>
+            <div className="btn-tab">
+              {activeIndex === 0 ? "close tab -" : "open tab +"}
+            </div>
           </div>
           {activeIndex !== 0 ? (
             <div className="accordion-content"></div>
@@ -74,16 +76,21 @@ function AboutContent({ isActiveOverlay }) {
             <div className="accordion-content open">
               {/* {isLoaded &&
                 restData.acf.background_and_skills[0].background_content} */}
+
               <p>
-                I am self-taught in 🎨design and 🎥filming, and studied
-                front-end web development at 🎓BCIT.
+                I am a <b>💻front-end developer</b> based in Vancouver, and a
+                graduate of BCIT. My 🔥passion is creating websites that provide
+                a great user experience through 💡simple structure and
+                ✨attractive design.
               </p>
               <p>
-                I used to be a 👮police officer for 10 years, and I discovered
-                my brand new 🔥passion in 💡web development while working on the
-                police intranet UX/UI improvement project, which led me to be a
-                💻front-end developer.
+                My goal is to strengthen connections between people and expand
+                clients' expressive capabilities through web development. I
+                believe that by enhancing the web, we can foster meaningful
+                interactions and create engaging online experiences that
+                resonate with users.
               </p>
+
               <h4>Dev Skill</h4>
               <div className="dev-skill-box">
                 <div className="skill">
@@ -154,14 +161,34 @@ function AboutContent({ isActiveOverlay }) {
             className="accordion-title"
             onClick={() => handleAccordionToggle(1)}
           >
-            <div>Myers Briggs Type</div>
-            <div>{activeIndex === 1 ? "-" : "+"}</div>
+            <div>Hobby</div>
+            <div className="btn-tab">
+              {activeIndex === 1 ? "close tab -" : "open tab +"}
+            </div>
           </div>
           {activeIndex !== 1 ? (
             <div className="accordion-content"></div>
           ) : (
             <div className="accordion-content open">
-              <p>INFP</p>
+              <p>
+                ⚾Sports: I recently picked up softball and joined a
+                recreational league! My teammates were so supportive, making the
+                whole season a blast.
+              </p>
+              <p>
+                🚀Browsing: I love exploring websites and shops. It's like a
+                treasure hunt for inspiration that keeps me energized!
+              </p>
+              <p>
+                🎮Video Games: They're my gateway to endless imaginative worlds,
+                letting me dive into new adventures and experiences.
+              </p>
+              <h4>Skill</h4>
+              <div className="design-skill-box">
+                <div className="skill">👀 Good eye</div>
+                <div className="skill">🏃 Fast runner</div>
+                <div className="skill">💡 Fast learner</div>
+              </div>
             </div>
           )}
         </div>
@@ -170,42 +197,20 @@ function AboutContent({ isActiveOverlay }) {
             className="accordion-title"
             onClick={() => handleAccordionToggle(2)}
           >
-            <div>Softball, Running, Hiking</div>
-            <div>{activeIndex === 2 ? "-" : "+"}</div>
+            <div>Other expreience</div>
+            <div className="btn-tab">
+              {activeIndex === 2 ? "close tab -" : "open tab +"}
+            </div>
           </div>
           {activeIndex !== 2 ? (
             <div className="accordion-content"></div>
           ) : (
             <div className="accordion-content open">
               <p>
-                I enjoy being active and spending time in nature. I took part in
-                a softball league which was a lot of fun. I feel there's
-                something special about the energy that comes with team sports.
-              </p>
-              <p>
-                On the flip side, I also love playing video games. Exploring
-                different worlds and scenarios is a great way to spark my
-                imagination, offering a creative escape into new possibilities.
-              </p>
-            </div>
-          )}
-        </div>
-        <div className="accordion-item">
-          <div
-            className="accordion-title"
-            onClick={() => handleAccordionToggle(3)}
-          >
-            <div>More about Police Officer</div>
-            <div>{activeIndex === 3 ? "-" : "+"}</div>
-          </div>
-          {activeIndex !== 3 ? (
-            <div className="accordion-content"></div>
-          ) : (
-            <div className="accordion-content open">
-              <p>
-                What would you imagine a police officer to be like? Actually, I
-                am not bulky or wild, and I have worked mostly in the head
-                office (but I liked and enjoyed the frontline as well!).
+                I used to be a 👮police officer for 10 years, and I discovered
+                my brand new passion in web development while working on the
+                police intranet UX/UI improvement project, which led me to be a
+                front-end developer.
               </p>
               <p>
                 I have worked in project management, internal communications,
@@ -214,6 +219,12 @@ function AboutContent({ isActiveOverlay }) {
                 implementation skills, as well as my interpersonal communication
                 skills.
               </p>
+              <h4>Skill</h4>
+              <div className="design-skill-box">
+                <div className="skill">✒️ Planning & Managing</div>
+                <div className="skill">🤝 Communication</div>
+                <div className="skill">🎯 Shooting (Useless)</div>
+              </div>
             </div>
           )}
         </div>
